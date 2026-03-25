@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranamya Kalambe | Software Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- connecting style.css -->
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            background-color: #030406;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #030406;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #374151;
+        }
+
+        .nav-link-active {
+            background-color: white;
+            color: black !important;
+            padding: 8px 10px;
+            border-radius: 6px;
+        }
+
+        .mobile-nav-active {
+            background-color: white;
+            color: black !important;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="h-20 bg-[#030406] flex items-center justify-between px-4 md:px-8 sticky top-0 z-50 border-b border-white/5">
+        <div id="left-section" class="flex items-center gap-3 md:gap-4">
+            <div id="logo-box"
+                class="w-[50px] h-[50px] bg-[#111827] rounded-lg border border-white/10 flex items-center justify-center">
+                <span class="text-[#22D3EE] text-xl font-bold">PK</span>
+            </div>
+            <div id="name-title-group" class="flex flex-col leading-tight">
+                <h1 class="text-white font-bold text-[14px] tracking-wide uppercase">Pranamya Kalambe</h1>
+                <p class="text-[#79EDFF] font-light text-[13px] tracking-wider uppercase">Software Developer</p>
+            </div>
+        </div>
+
+        <div id="right-section" class="hidden lg:flex items-center gap-8">
+            <a href="#home"
+                class="nav-link text-[20px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="home">Home</a>
+            <a href="#services"
+                class="nav-link text-[20px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="services">Services</a>
+            <a href="#process"
+                class="nav-link text-[20px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="process">Process</a>
+            <a href="#pricing"
+                class="nav-link text-[20px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="pricing">Pricing</a>
+            <a href="#work"
+                class="nav-link text-[20px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="work">Our Work</a>
+            <a href="#about-me"
+                class="nav-link text-[20px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="about-me">About Me</a>
+            <a href="#contact"
+                class="nav-link text-[20px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="contact">Contacts</a>
+        </div>
+
+        <button id="mobile-menu-toggle"
+            class="lg:hidden w-[50px] h-[50px] bg-[#111827] rounded-lg border border-white/10 flex items-center justify-center text-white transition-all duration-300 hover:bg-[#1f2937]">
+            <i data-lucide="menu" id="menu-icon"></i>
+            <i data-lucide="x" id="close-icon" class="hidden"></i>
+        </button>
+
+        <!-- Mobile Nav -->
+        <div id="mobile-nav"
+            class="fixed top-20 left-0 w-full h-[calc(100vh-80px)] bg-[#030406] border-t border-white/5 flex flex-col items-center py-8 lg:hidden shadow-2xl z-50 overflow-y-auto hidden">
+            <div class="flex flex-col items-center w-full px-4">
+                <a href="#home"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="home">Home</a>
+                <a href="#services"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="services">Services</a>
+                <a href="#process"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="process">Process</a>
+                <a href="#pricing"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="pricing">Pricing</a>
+                <a href="#work"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="work">Our Work</a>
+                <a href="#about-me"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="about-me">About Me</a>
+                <a href="#contact"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="contact">Contacts</a>
+            </div>
+
+            <div class="flex flex-row items-center justify-center gap-4 md:gap-[50px] mt-[40px] w-full px-4">
+
+                <a href="#"
+                    class="flex items-center justify-center gap-[12px] w-[220px] h-[56px] bg-white text-black rounded-[12px] font-medium transition-transform hover:scale-[1.02]">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                    <span>Instagram</span>
+                </a>
+
+                <a href="mailto:pranamya653@gmail.com"
+                    class="flex items-center justify-center gap-[12px] w-[220px] h-[56px] bg-transparent border border-[#2F2F2F] text-white rounded-[12px] font-medium transition-all hover:bg-white/5">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    <span>Mail</span>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="home" class="flex flex-col lg:flex-row w-full min-h-fit lg:min-h-[calc(100vh-80px)] lg:pt-[30px]">
+        <div class="w-full lg:w-[65%] flex flex-col px-6 md:px-12 lg:pl-[30px] lg:pr-8 pt-12 md:pt-20 lg:pt-0 pb-0">
+            <h1
+                class="text-white text-[48px] md:text-[64px] lg:text-[80px] font-extrabold leading-[1.1] mb-[20px] max-w-4xl">
+                Get More Customers with a Professional Website.
+            </h1>
+
+            <p
+                class="text-white text-[20px] md:text-[23px] lg:text-[20px] font-light leading-relaxed mb-[30px] max-w-2xl">
+                We design modern websites that build trust, showcase your services, and help local businesses grow
+                faster.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 md:gap-[30px] lg:gap-5 mb-[40px]">
+                <a href="#work"
+                    class="h-[61px] w-full sm:w-[276px] lg:w-[192px] bg-white text-black text-[20px] font-medium rounded-[12px] border-none flex items-center justify-center hover:bg-gray-200 transition-colors">See
+                    Our Work.</a>
+                <a href="#services"
+                    class="h-[61px] w-full sm:w-[276px] lg:w-[192px] bg-[#030406] text-white text-[20px] font-medium rounded-[12px] border border-white flex items-center justify-center hover:bg-white/10 transition-colors">See
+                    Our Services.</a>
+            </div>
+
+            <div class="flex flex-row gap-12 md:gap-[88px] lg:gap-20">
+                <div class="flex flex-col counter-container" data-end="40">
+                    <span class="text-[48px] font-extrabold text-white leading-none counter-value">0</span>
+                    <span class="text-[20px] text-white mt-[10px]">Projects Completed.</span>
+                </div>
+                <div class="flex flex-col counter-container" data-end="36">
+                    <span class="text-[48px] font-extrabold text-white leading-none counter-value">0</span>
+                    <span class="text-[20px] text-white mt-[10px]">Happy Clients.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-[35%] hidden lg:flex items-center justify-center relative">
+            <img src="./Assets/Images/heroRight.png" alt="Professional Website Mockup"
+                class="object-cover object-center">
+        </div>
+    </main>
+
+    <!-- Services Section -->
+    <section id="services" class="pt-0 pb-0 bg-[#030406] w-full">
+        <div class="w-full">
+            <div class="pt-[30px] pb-[30px] px-6 md:px-12 lg:pl-[30px] lg:pr-0">
+                <h2 class="text-white text-[48px] md:text-[64px] font-bold leading-tight">Services.</h2>
+            </div>
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-6 md:px-12 lg:pl-[30px] lg:pr-[30px]">
+                <!-- Card 1 -->
+                <div
+                    class="bg-[linear-gradient(140deg,#030406_0%,#161E2F_100%)] border border-white/5 p-[20px] rounded-[32px] hover:border-[#22D3EE]/30 hover:-translate-y-3 transition-all duration-500 cursor-pointer group shadow-2xl flex flex-col h-full">
+                    <div
+                        class="w-14 h-14 bg-[#111827] rounded-xl flex items-center justify-center mb-8 group-hover:bg-[#1a2234] transition-colors duration-500">
+                        <i data-lucide="rocket" class="text-[#79EDFF]"></i>
+                    </div>
+                    <h3 class="text-white text-[28px] font-bold mb-4">Custom Business Website.</h3>
+                    <p class="text-[#A0A0A0] text-[17px] font-light leading-relaxed mb-8">Modern, high-converting
+                        websites built to help your business attract more customers and grow online.</p>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Mobile Responsive Design</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>SEO Ready Structure</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>WhatsApp & Contact Integration</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Fast Loading Performance</li>
+                    </ul>
+                    <button
+                        class="w-full h-[56px] bg-white text-black text-[18px] font-medium rounded-[12px] hover:bg-gray-200 transition-colors">Start
+                        Your Project.</button>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-[#0d1117] border border-white/5 p-[20px] rounded-[32px] hover:border-[#22D3EE]/30 hover:-translate-y-3 transition-all duration-500 cursor-pointer group shadow-2xl flex flex-col h-full">
+                    <div
+                        class="w-14 h-14 bg-[#111827] rounded-xl flex items-center justify-center mb-8 group-hover:bg-[#1a2234] transition-colors duration-500">
+                        <i data-lucide="refresh-cw" class="text-[#79EDFF]"></i>
+                    </div>
+                    <h3 class="text-white text-[28px] font-bold mb-4">Website Redesign.</h3>
+                    <p class="text-[#A0A0A0] text-[17px] font-light leading-relaxed mb-8">Upgrade your existing website
+                        to attract more customers and build stronger trust.</p>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Fresh, modern design</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Better mobile experience</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Faster loading speed</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Improved user experience</li>
+                    </ul>
+                    <button
+                        class="w-full h-[56px] bg-[#030406] text-white text-[18px] font-medium rounded-[12px] border border-white/20 hover:bg-white/5 transition-colors">Let's
+                        Redesign.</button>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-[#0d1117] border border-white/5 p-[20px] rounded-[32px] hover:border-[#22D3EE]/30 hover:-translate-y-3 transition-all duration-500 cursor-pointer group shadow-2xl flex flex-col h-full">
+                    <div
+                        class="w-14 h-14 bg-[#111827] rounded-xl flex items-center justify-center mb-8 group-hover:bg-[#1a2234] transition-colors duration-500">
+                        <i data-lucide="shield-check" class="text-[#79EDFF]"></i>
+                    </div>
+                    <h3 class="text-white text-[28px] font-bold mb-4">Maintenance & Support.</h3>
+                    <p class="text-[#A0A0A0] text-[17px] font-light leading-relaxed mb-8">Ongoing support to ensure your
+                        website performs without interruptions.</p>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Website updates</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Security monitoring</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Regular backups</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Ongoing support</li>
+                    </ul>
+                    <button
+                        class="w-full h-[56px] bg-[#030406] text-white text-[18px] font-medium rounded-[12px] border border-white/20 hover:bg-white/5 transition-colors">Start
+                        Maintaining.</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="w-full bg-[#030406] pt-[60px] pb-[60px] px-[20px] md:px-[30px]">
+        <div class="max-w-[1440px] mx-auto flex flex-col">
+            <h2 class="text-white text-[48px] md:text-[64px] font-bold leading-tight mb-[60px] text-left">Process.</h2>
+
+            <div class="relative w-full max-w-[1000px] mx-auto mt-[20px]" id="timeline-container">
+                <!-- Background Line -->
+                <div
+                    class="absolute left-[40px] lg:left-1/2 top-0 bottom-0 w-[1px] bg-[#2F2F2F] transform -translate-x-1/2">
+                </div>
+                <!-- Fill Line -->
+                <div class="absolute left-[40px] lg:left-1/2 top-0 w-[1px] bg-[#79EDFF] transform -translate-x-1/2 transition-all duration-300 ease-out shadow-[0_0_10px_#79EDFF]"
+                    id="timeline-fill" style="height: 0%;"></div>
+
+                <!-- Item 1 -->
+                <div
+                    class="timeline-item relative flex flex-col justify-between mb-[60px] opacity-0 translate-y-10 transition-all duration-700 ease-out w-full">
+                    <!-- Shared Number Box -->
+                    <div
+                        class="absolute left-[40px] lg:left-1/2 top-0 -translate-x-1/2 w-[50px] h-[50px] bg-white text-black flex items-center justify-center text-[24px] font-medium rounded-[8px] z-10">
+                        1
+                    </div>
+
+                    <!-- Mobile Content -->
+                    <div class="flex flex-col lg:hidden w-full pl-[95px]">
+                        <div
+                            class="w-[185px] h-[50px] bg-white text-black flex items-center justify-center text-[24px] font-medium rounded-[8px] mb-[20px]">
+                            Discovery
+                        </div>
+                        <div class="p-[40px] border border-[#2F2F2F] rounded-[12px] text-white bg-transparent w-full">
+                            <p class="text-[16px] leading-relaxed">Business goals & audience research.</p>
+                        </div>
+                    </div>
+
+                    <!-- Desktop Content -->
+                    <div class="hidden lg:flex w-full">
+                        <div class="w-[50%]"></div>
+                        <div class="w-[50%] pl-[55px] flex flex-col items-start">
+                            <div
+                                class="w-[185px] h-[50px] bg-white text-black flex items-center justify-center text-[24px] font-medium rounded-[8px] mb-[20px]">
+                                Discovery
+                            </div>
+                            <div
+                                class="p-[40px] border border-[#2F2F2F] rounded-[12px] text-white bg-transparent max-w-[450px] w-full">
+                                <p class="text-[16px] leading-relaxed">Business goals & audience research.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div
+                    class="timeline-item relative flex flex-col justify-between mb-[60px] opacity-0 translate-y-10 transition-all duration-700 ease-out w-full">
+                    <!-- Shared Number Box -->
+                    <div
+                        class="absolute left-[40px] lg:left-1/2 top-0 -translate-x-1/2 w-[50px] h-[50px] bg-white text-black flex items-center justify-center text-[24px] font-medium rounded-[8px] z-10">
+                        2
+                    </div>
+
+                    <!-- Mobile Content -->
+                    <div class="flex flex-col lg:hidden w-full pl-[95px]">
+                        <div
+                            class="w-[185px] h-[50px] bg-white text-black flex items-center justify-center text-[24px] font-medium rounded-[8px] mb-[20px]">
+                            Design
+                        </div>
+                        <div class="p-[40px] border border-[#2F2F2F] rounded-[12px] text-white bg-transparent w-full">
+                            <p class="text-[16px] leading-relaxed">Premium UI/UX wireframes (like my Cake Shop project).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Desktop Content -->
+                    <div class="hidden lg:flex w-full">
+                        <div class="w-[50%] pr-[55px] flex flex-col items-end">
+                            <div
+                                class="w-[185px] h-[50px] bg-white text-black flex items-center justify-center text-[24px] font-medium rounded-[8px] mb-[20px]">
+                                Design
+                            </div>
+                            <div
+                                class="p-[40px] border border-[#2F2F2F] rounded-[12px] text-white bg-transparent max-w-[450px] w-full">
+                                <p class="text-[16px] leading-relaxed">Premium UI/UX wireframes (like my Cake Shop
+                                    project).</p>
+                            </div>
+                        </div>
+                        <div class="w-[50%]"></div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div
+                    class="timeline-item relative flex flex-col justify-between mb-[60px] opacity-0 translate-y-10 transition-all duration-700 ease-out w-full">
+                    <!-- Shared Number Box -->
+                    <div
+                        class="absolute left-[40px] lg:left-1/2 top-0 -translate-x-1/2 w-[50px] h-[50px] bg-white text-black flex items-center justify-center text-[24px] font-medium rounded-[8px] z-10">
+                        3
+                    </div>
+
+                    <!-- Mobile Content -->
+                    <div class="flex flex-col lg:hidden w-full pl-[95px]">
+                        <div
+                            class="w-[185px] h-[50px] bg-white text-black flex items-center justify-center text-[24px] font-medium rounded-[8px] mb-[20px]">
+                            Build
+                        </div>
+                        <div class="p-[40px] border border-[#2F2F2F] rounded-[12px] text-white bg-transparent w-full">
+                            <p class="text-[16px] leading-relaxed">Clean, SEO-optimized, responsive coding.</p>
+                        </div>
+                    </div>
+
+                    <!-- Desktop Content -->
+                    <div class="hidden lg:flex w-full">
+                        <div class="w-[50%]"></div>
+                        <div class="w-[50%] pl-[55px] flex flex-col items-start">
+                            <div
+                                class="w-[185px] h-[50px] bg-white text-black flex items-center justify-center text-[24px] font-medium rounded-[8px] mb-[20px]">
+                                Build
+                            </div>
+                            <div
+                                class="p-[40px] border border-[#2F2F2F] rounded-[12px] text-white bg-transparent max-w-[450px] w-full">
+                                <p class="text-[16px] leading-relaxed">Clean, SEO-optimized, responsive coding.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div
+                    class="timeline-item relative flex flex-col justify-between mb-[60px] opacity-0 translate-y-10 transition-all duration-700 ease-out w-full">
+                    <!-- Shared Number Box -->
+                    <div
+                        class="absolute left-[40px] lg:left-1/2 top-0 -translate-x-1/2 w-[50px] h-[50px] bg-white text-black flex items-center justify-center text-[24px] font-medium rounded-[8px] z-10">
+                        4
+                    </div>
+
+                    <!-- Mobile Content -->
+                    <div class="flex flex-col lg:hidden w-full pl-[95px]">
+                        <div
+                            class="w-[185px] h-[50px] bg-white text-black flex items-center justify-center text-[24px] font-medium rounded-[8px] mb-[20px]">
+                            Launch
+                        </div>
+                        <div class="p-[40px] border border-[#2F2F2F] rounded-[12px] text-white bg-transparent w-full">
+                            <p class="text-[16px] leading-relaxed">Deployment and 30-day post-launch support.</p>
+                        </div>
+                    </div>
+
+                    <!-- Desktop Content -->
+                    <div class="hidden lg:flex w-full">
+                        <div class="w-[50%] pr-[55px] flex flex-col items-end">
+                            <div
+                                class="w-[185px] h-[50px] bg-white text-black flex items-center justify-center text-[24px] font-medium rounded-[8px] mb-[20px]">
+                                Launch
+                            </div>
+                            <div
+                                class="p-[40px] border border-[#2F2F2F] rounded-[12px] text-white bg-transparent max-w-[450px] w-full">
+                                <p class="text-[16px] leading-relaxed">Deployment and 30-day post-launch support.</p>
+                            </div>
+                        </div>
+                        <div class="w-[50%]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="w-full bg-[#030406] pt-[30px] pb-[60px] px-[30px]">
+        <div class="max-w-[1440px] mx-auto flex flex-col">
+            <h2
+                class="text-white text-[48px] md:text-[64px] font-bold leading-tight mb-[60px] text-left ml-[30px] md:ml-0">
+                Pricing & Packages.</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px] w-full items-stretch">
+                <!-- Starter -->
+                <div
+                    class="bg-[#0d1117] border border-[#2F2F2F] p-[32px] rounded-[32px] hover:border-[#22D3EE]/30 transition-all duration-500 flex flex-col h-full shadow-2xl">
+                    <h3 class="text-white text-[24px] font-bold mb-2">Starter</h3>
+                    <div class="text-white text-[36px] font-extrabold mb-6">₹15,000</div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>3-5 Pages</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Mobile Responsive</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Basic SEO</li>
+                    </ul>
+                    <button
+                        class="w-full h-[56px] bg-transparent border border-[#2F2F2F] text-white text-[18px] font-medium rounded-[12px] hover:bg-white hover:text-black transition-colors">Get
+                        Started</button>
+                </div>
+
+                <!-- Professional (Most Popular) -->
+                <div
+                    class="bg-[linear-gradient(45deg,#030406,#161E2F)] border border-[#79EDFF]/60 p-[32px] rounded-[32px] hover:-translate-y-2 transition-all duration-500 flex flex-col h-full relative shadow-[0_0_30px_rgba(121,237,255,0.15)]">
+                    <div
+                        class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#79EDFF] text-black text-[12px] font-bold uppercase tracking-wider py-1 px-4 rounded-full">
+                        Most Popular</div>
+                    <h3 class="text-white text-[24px] font-bold mb-2">Professional</h3>
+                    <div class="text-white text-[36px] font-extrabold mb-6">₹30,000</div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Up to 10 Pages</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Custom UI/UX</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Lead Gen Forms</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>1-Month Support</li>
+                    </ul>
+                    <button
+                        class="w-full h-[56px] bg-white text-black text-[18px] font-medium rounded-[12px] hover:bg-gray-200 transition-colors">Get
+                        Started</button>
+                </div>
+
+                <!-- Elite -->
+                <div
+                    class="bg-[#0d1117] border border-[#2F2F2F] p-[32px] rounded-[32px] hover:border-[#22D3EE]/30 transition-all duration-500 flex flex-col h-full shadow-2xl md:col-span-2 lg:col-span-1 md:w-[calc(50%-12.5px)] md:mx-auto lg:w-full">
+                    <h3 class="text-white text-[24px] font-bold mb-2">Elite</h3>
+                    <div class="text-white text-[36px] font-extrabold mb-6">Custom Quote</div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>E-commerce</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Payment Gateways</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Advanced Animations</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Unlimited Pages</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>Custom UI/UX</li>
+                        <li class="flex items-center gap-3 text-white/70 text-[16px]"><i data-lucide="check"
+                                class="text-[#79EDFF] w-4 h-4"></i>3-Months Support</li>
+                    </ul>
+                    <button
+                        class="w-full h-[56px] bg-transparent border border-[#2F2F2F] text-white text-[18px] font-medium rounded-[12px] hover:bg-white hover:text-black transition-colors">Get
+                        Started
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-[40px] text-center">
+                <p class="text-[#A0A0A0] text-[14px] md:text-[16px] font-light">
+                    * Prices may vary based on specific project requirements.<br>
+                    50% deposit required to initiate. Payments via UPI & Bank Transfer.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Work Section -->
+    <section id="work" class="w-full bg-[#030406] pt-[30px] pb-[60px] px-[30px]">
+        <div class="max-w-[1440px] mx-auto flex flex-col">
+            <h2 class="text-white text-[48px] font-semibold leading-[1.2] mb-[40px] text-left">Our Work.</h2>
+
+            <!-- Featured Project -->
+            <div
+                class="w-full bg-[#0d1117] border border-[#2F2F2F] rounded-[24px] p-[20px] md:p-[32px] mb-[30px] flex flex-col lg:flex-row gap-[24px] md:gap-[30px] transition-all duration-300 hover:-translate-y-[6px] hover:shadow-[0px_10px_25px_rgba(0,0,0,0.3)] group cursor-pointer">
+                <div class="w-full lg:w-[55%]">
+                    <img src="./Assets/Images/cakeshop.jpeg" alt="Cake Shop Website"
+                        class="w-full h-[240px] md:h-full md:min-h-[300px] object-cover rounded-[16px]">
+                </div>
+                <div class="w-full lg:w-[45%] flex flex-col justify-center">
+                    <h3 class="text-white text-[28px] md:text-[40px] font-light mb-[12px] md:mb-[16px]">Cake Shop
+                        Website.</h3>
+                    <p
+                        class="text-[#A0A0A0] text-[16px] md:text-[20px] font-light leading-[1.5] mb-[16px] md:mb-[20px]">
+                        A premium brand-focused website built to increase walk-in and online cake orders. Designed with
+                        elegance, optimized for conversions.</p>
+                    <ul class="mb-[24px] md:mb-[30px] space-y-[8px] md:space-y-[10px]">
+                        <li class="text-[#A0A0A0] text-[15px] md:text-[18px] font-light flex items-center gap-3"><span
+                                class="text-white/40">•</span>Increased order inquiries</li>
+                        <li class="text-[#A0A0A0] text-[15px] md:text-[18px] font-light flex items-center gap-3"><span
+                                class="text-white/40">•</span>Mobile-first optimized</li>
+                        <li class="text-[#A0A0A0] text-[15px] md:text-[18px] font-light flex items-center gap-3"><span
+                                class="text-white/40">•</span>Clean product showcase</li>
+                    </ul>
+                    <a href="./cakeShop/cakeindex.html"
+                        class="flex items-center justify-center w-full h-[56px] md:h-[61px] bg-white text-black text-[16px] md:text-[18px] font-medium rounded-[12px] hover:bg-gray-200 transition-all duration-300">
+                        View Case Study
+                    </a>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-[24px] md:gap-[30px] w-full">
+                <!-- Project 2 -->
+                <div
+                    class="bg-[#030406] border border-[#2F2F2F] rounded-[24px] p-[20px] md:p-[24px] flex flex-col transition-all duration-300 hover:-translate-y-[6px] hover:shadow-[0px_10px_25px_rgba(0,0,0,0.3)] group cursor-pointer">
+                    <img src="https://picsum.photos/seed/cafeweb/800/500" alt="Café Website"
+                        class="w-full h-[220px] md:h-[280px] object-cover rounded-[16px] mb-[20px] md:mb-[24px]">
+                    <h3 class="text-white text-[24px] md:text-[28px] font-light mb-[10px] md:mb-[12px]">Café Website
+                    </h3>
+                    <p
+                        class="text-[#A0A0A0] text-[16px] md:text-[18px] font-light leading-[1.5] mb-[20px] md:mb-[24px]">
+                        Warm, inviting coffee shop platform with online ordering and menu.</p>
+                    <div class="mt-auto">
+                        <a href=""
+                            class="flex items-center justify-center w-full h-[56px] md:h-[61px] bg-transparent border border-[#2F2F2F] text-white text-[16px] md:text-[18px] font-medium rounded-[12px] transition-all duration-300 hover:bg-white hover:text-black">View
+                            Case Study</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div
+                    class="bg-[#030406] border border-[#2F2F2F] rounded-[24px] p-[20px] md:p-[24px] flex flex-col transition-all duration-300 hover:-translate-y-[6px] hover:shadow-[0px_10px_25px_rgba(0,0,0,0.3)] group cursor-pointer">
+                    <img src="https://picsum.photos/seed/mobileshop/800/500" alt="Mobile Shop Website"
+                        class="w-full h-[220px] md:h-[280px] object-cover rounded-[16px] mb-[20px] md:mb-[24px]">
+                    <h3 class="text-white text-[24px] md:text-[28px] font-light mb-[10px] md:mb-[12px]">Mobile Shop
+                        Website</h3>
+                    <p
+                        class="text-[#A0A0A0] text-[16px] md:text-[18px] font-light leading-[1.5] mb-[20px] md:mb-[24px]">
+                        Sleek smartphone store with product showcase and quick checkout.</p>
+                    <div class="mt-auto">
+                        <a href=""
+                            class="flex items-center justify-center w-full h-[56px] md:h-[61px] bg-transparent border border-[#2F2F2F] text-white text-[16px] md:text-[18px] font-medium rounded-[12px] transition-all duration-300 hover:bg-white hover:text-black">View
+                            Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about-me" class="w-full bg-[#030406] pt-[80px] pb-[15px] px-[30px]">
+        <div class="max-w-[1440px] mx-auto">
+            <h2 class="text-white text-[48px] md:text-[64px] font-semibold leading-[1.1] mb-[60px] text-left">About Me.
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-[40px] lg:gap-[100px]">
+                <div class="relative pl-[30px] md:pl-[40px]">
+                    <div class="absolute left-0 top-0 bottom-0 w-[1px] bg-white"></div>
+                    <div class="flex flex-col h-full">
+                        <h3 class="text-white text-[28px] md:text-[36px] font-light leading-[1.3] mb-[32px]">I design
+                            digital experiences that feel simple, intentional, and built to perform.</h3>
+                        <p class="text-[#A0A0A0] text-[18px] md:text-[20px] font-light leading-[1.6] mb-[32px]">Focused
+                            on clean UI, conversion-driven design, and modern web experiences.</p>
+                        <div class="mt-auto">
+                            <p class="text-[#A0A0A0] text-[18px] md:text-[20px] font-light leading-[1.6] mb-[24px]">
+                                Interested in working together?<br><span class="text-white">Let's build something
+                                    meaningful.</span></p>
+                            <button
+                                class="px-[32px] py-[14px] bg-transparent border border-[#2F2F2F] text-white text-[16px] font-light rounded-[8px] hover:bg-white hover:text-black transition-all duration-300">Get
+                                in Touch</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-[32px]">
+                    <p class="text-[#A0A0A0] text-[18px] md:text-[20px] font-light leading-[1.7]">I'm a designer and
+                        developer focused on building high-performing websites and digital products. My work blends
+                        clean visual design with practical functionality — ensuring every project not only looks great
+                        but works seamlessly.</p>
+                    <p class="text-[#A0A0A0] text-[18px] md:text-[20px] font-light leading-[1.7]">I specialize in
+                        responsive web design, user-focused interfaces, and conversion optimization. Every decision I
+                        make is driven by clarity, usability, and long-term scalability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="w-full bg-[#030406] pt-[15px] pb-[100px] px-[20px] md:px-[30px]">
+        <div class="max-w-[1440px] mx-auto">
+            <h2 class="text-white text-[48px] md:text-[64px] font-semibold leading-[1.1] mb-[80px] text-left">Contact
+                Me.</h2>
+            <div class="flex flex-col items-center text-center max-w-[800px] mx-auto w-full">
+                <h3 class="text-white text-[32px] md:text-[40px] font-semibold mb-[24px] w-full">Let's build something
+                    meaningful.</h3>
+                <p class="text-[#A0A0A0] text-[18px] md:text-[20px] font-light leading-[1.6] mb-[40px] max-w-[600px]">If
+                    you're looking for a website or digital product that's clean, modern, and built to perform — let's
+                    talk.</p>
+                <div class="flex flex-col sm:flex-row items-center gap-[20px]">
+                    <a href="#"
+                        class="flex items-center justify-center gap-[12px] w-[220px] h-[56px] bg-white text-black rounded-[12px] font-medium transition-transform hover:scale-[1.02]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-instagram-icon lucide-instagram">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="mailto:pranamya653@gmail.com"
+                        class="flex items-center justify-center gap-[12px] w-[220px] h-[56px] bg-transparent border border-[#2F2F2F] text-white rounded-[12px] font-medium transition-all hover:bg-white/5">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        <span>Mail</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#030406] py-[40px] px-[30px]">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="w-full h-[1px] bg-[#2F2F2F] mb-[40px]"></div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-[20px]">
+                <div class="text-[#666666] text-[16px] flex items-center gap-2">
+                    <span class="text-[18px]">©</span>
+                    <span>2026 Pranamya Kalambe</span>
+                </div>
+                <div class="flex items-center gap-[24px]">
+                    <a href="#" class="text-[#666666] hover:text-white transition-colors">Instagram</a>
+                    <a href="#" class="text-[#666666] hover:text-white transition-colors">Outlook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
