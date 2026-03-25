@@ -1,1 +1,290 @@
-njpp zbew kmdf erdc
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Slice Bakery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+      --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      --color-choco-800: #4A3B32;
+      --color-choco-900: #2D241E;
+      --color-cream-50: #FDFBF7;
+      --color-cream-100: #F6F3EA;
+      --color-cream-200: #EAE4D3;
+    }
+  </style>
+  <link rel="stylesheet" href="./cakecss.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-choco-900 bg-cream-50 flex flex-col min-h-screen">
+  
+  <!-- Navbar -->
+  <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="#" class="nav-link flex items-center gap-2 text-rose-500" data-target="home">
+          <i data-lucide="cake-slice"></i>
+          <span class="font-serif text-2xl font-bold text-choco-900">Sweet Slice</span>
+        </a>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="nav-link text-choco-800 hover:text-rose-500 font-medium transition-colors" data-target="home">Home</a>
+          <a href="#menu" class="nav-link text-choco-800 hover:text-rose-500 font-medium transition-colors" data-target="home">Menu</a>
+          <a href="#custom-order" class="nav-link text-choco-800 hover:text-rose-500 font-medium transition-colors" data-target="home">Custom Order</a>
+          <a href="#about" class="nav-link text-choco-800 hover:text-rose-500 font-medium transition-colors" data-target="home">About Us</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <button id="cart-btn" class="relative p-2 text-choco-800 hover:text-rose-500 transition-colors">
+            <i data-lucide="shopping-bag"></i>
+            <span id="cart-badge" class="absolute top-0 right-0 bg-rose-500 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center transform translate-x-1/4 -translate-y-1/4 hidden">0</span>
+          </button>
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-choco-800 hover:text-rose-500 transition-colors">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden absolute w-full left-0 top-16 bg-white shadow-lg overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+      <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+        <a href="#home" class="nav-link block px-3 py-2 text-choco-800 hover:text-rose-500 hover:bg-rose-50 rounded-md font-medium transition-colors" data-target="home">Home</a>
+        <a href="#menu" class="nav-link block px-3 py-2 text-choco-800 hover:text-rose-500 hover:bg-rose-50 rounded-md font-medium transition-colors" data-target="home">Menu</a>
+        <a href="#custom-order" class="nav-link block px-3 py-2 text-choco-800 hover:text-rose-500 hover:bg-rose-50 rounded-md font-medium transition-colors" data-target="home">Custom Order</a>
+        <a href="#about" class="nav-link block px-3 py-2 text-choco-800 hover:text-rose-500 hover:bg-rose-50 rounded-md font-medium transition-colors" data-target="home">About Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="app-container" class="flex-grow">
+    
+    <!-- Home View -->
+    <div id="view-home" class="view-section active">
+      
+      <!-- Hero -->
+      <section id="home" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16">
+        <div class="absolute inset-0 z-0">
+          <img src="../Assets/Images/heroImg.avif" alt="Bakery Background" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-r from-choco-900/90 to-choco-900/40"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto animate-on-scroll">
+          <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+            Delicious Cakes for  <br/><span class="text-rose-400 italic">Every Occasion</span>
+          </h1>
+          <p class="text-lg md:text-xl text-cream-100 mb-10 max-w-2xl mx-auto">
+            Handcrafted with love, premium ingredients, and a touch of magic. Make your celebrations unforgettable.
+          </p>
+          <a href="#custom-order" class="inline-block bg-rose-500 hover:bg-rose-600 text-white font-semibold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+            Order Now
+          </a>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section id="categories" class="py-20 bg-cream-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16 animate-on-scroll">
+            <h2 class="text-4xl font-serif font-bold text-choco-900 mb-4">Our Categories</h2>
+            <div class="w-24 h-1 bg-rose-400 mx-auto rounded-full"></div>
+          </div>
+          <div id="categories-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+        </div>
+      </section>
+
+      <!-- Menu -->
+      <section id="menu" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16 animate-on-scroll">
+            <h2 class="text-4xl font-serif font-bold text-choco-900 mb-4">Our Signature Menu</h2>
+            <div class="w-24 h-1 bg-rose-400 mx-auto rounded-full"></div>
+          </div>
+          <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"></div>
+        </div>
+      </section>
+
+      <!-- Custom Order -->
+      <section id="custom-order" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-cream-50 rounded-3xl p-8 md:p-12 shadow-xl border border-cream-200 animate-on-scroll">
+            <div class="text-center mb-10">
+              <h2 class="text-4xl font-serif font-bold text-choco-900 mb-4">Design Your Dream Cake</h2>
+              <div class="w-24 h-1 bg-rose-400 mx-auto rounded-full mb-4"></div>
+              <p class="text-choco-800/70">Start by choosing your base, and we'll guide you through the rest.</p>
+            </div>
+            <form id="custom-order-form" class="space-y-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-3">
+                  <label class="block text-sm font-semibold text-choco-900 uppercase tracking-wider">Occasion / Category</label>
+                  <select id="custom-category" required class="w-full bg-white border border-cream-200 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-rose-400 text-choco-900">
+                    <option value="" disabled selected>Select an occasion</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="Corporate">Corporate Event</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="space-y-3">
+                  <label class="block text-sm font-semibold text-choco-900 uppercase tracking-wider">Base Flavor</label>
+                  <select id="custom-flavor" required class="w-full bg-white border border-cream-200 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-rose-400 text-choco-900">
+                    <option value="" disabled selected>Select a flavor</option>
+                    <option value="Vanilla Bean">Vanilla Bean</option>
+                    <option value="Rich Chocolate">Rich Chocolate</option>
+                    <option value="Red Velvet">Red Velvet</option>
+                    <option value="Lemon Zest">Lemon Zest</option>
+                    <option value="Strawberry">Strawberry</option>
+                  </select>
+                </div>
+              </div>
+              <div class="pt-6 text-center">
+                <button type="submit" class="bg-rose-500 hover:bg-rose-600 text-white font-semibold text-lg px-12 py-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 w-full md:w-auto">
+                  Continue to Details
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us -->
+      <section id="about" class="py-20 bg-cream-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16 animate-on-scroll">
+            <h2 class="text-4xl font-serif font-bold text-choco-900 mb-4">Our Story & Chefs</h2>
+            <div class="w-24 h-1 bg-rose-400 mx-auto rounded-full"></div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20 animate-on-scroll">
+            <div class="rounded-3xl overflow-hidden shadow-xl">
+              <img src="../Assets/Images/aboutImg.avif" alt="Bakery Interior" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="w-full h-full object-cover" />
+            </div>
+            <div class="space-y-6">
+              <h3 class="text-3xl font-serif font-bold text-choco-900">Baked with Passion Since 2010</h3>
+              <p class="text-lg text-choco-800/80 leading-relaxed">What started as a small family kitchen has blossomed into a beloved local bakery. At Sweet Slice, we believe that every celebration deserves a centerpiece that looks as incredible as it tastes.</p>
+              <p class="text-lg text-choco-800/80 leading-relaxed">We source only the finest ingredients—from rich Belgian chocolate to fresh, locally grown berries. Our team of passionate bakers and decorators pour their hearts into every creation, ensuring your special moments are truly unforgettable.</p>
+            </div>
+          </div>
+          <div class="text-center mb-12 animate-on-scroll">
+            <h3 class="text-3xl font-serif font-bold text-choco-900 mb-2">Meet Our Master Chefs</h3>
+            <p class="text-choco-800/60 max-w-2xl mx-auto">The artists behind our delicious creations.</p>
+          </div>
+          <div id="chefs-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Cart View -->
+    <div id="view-cart" class="view-section hidden pt-24 pb-16 bg-cream-50 min-h-[80vh]">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-4 mb-10">
+          <button class="nav-link text-choco-800 hover:text-rose-500 p-2 bg-white rounded-full shadow-sm" data-target="home">
+            <i data-lucide="arrow-left"></i>
+          </button>
+          <h1 class="text-4xl font-serif font-bold text-choco-900">Your Cart</h1>
+        </div>
+        <div id="cart-content"></div>
+      </div>
+    </div>
+
+    <!-- Checkout View -->
+    <div id="view-checkout" class="view-section hidden pt-24 pb-16 bg-cream-50 min-h-[80vh]">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="checkout-header" class="mb-12">
+          <button id="checkout-back-btn" class="inline-flex items-center gap-2 text-choco-800 hover:text-rose-500 mb-8 font-medium">
+            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+            <span id="checkout-back-text">Back</span>
+          </button>
+          
+          <!-- Progress Bar -->
+          <div class="flex items-center justify-between relative">
+            <div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-cream-200 z-0 rounded-full"></div>
+            <div id="checkout-progress" class="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-rose-500 z-0 rounded-full transition-all duration-500" style="width: 0%"></div>
+            
+            <div class="checkout-step-indicator relative z-10 flex flex-col items-center gap-2" data-step="1">
+              <div class="step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-rose-500 text-white">1</div>
+              <span class="step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-rose-500">Size</span>
+            </div>
+            <div class="checkout-step-indicator relative z-10 flex flex-col items-center gap-2" data-step="2">
+              <div class="step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-white text-choco-800 border-2 border-cream-200">2</div>
+              <span class="step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-choco-800/50">Message</span>
+            </div>
+            <div class="checkout-step-indicator relative z-10 flex flex-col items-center gap-2" data-step="3">
+              <div class="step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-white text-choco-800 border-2 border-cream-200">3</div>
+              <span class="step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-choco-800/50">Delivery</span>
+            </div>
+            <div class="checkout-step-indicator relative z-10 flex flex-col items-center gap-2" data-step="4">
+              <div class="step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-white text-choco-800 border-2 border-cream-200">4</div>
+              <span class="step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-choco-800/50">Payment</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-cream-100">
+          <div id="checkout-step-content" class="p-8 md:p-12">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-choco-900 text-cream-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 border-b border-choco-800 pb-12">
+        <div class="space-y-6">
+          <a href="#" class="nav-link flex items-center gap-2 text-rose-400" data-target="home">
+            <i data-lucide="cake-slice" class="w-8 h-8"></i>
+            <span class="font-serif text-2xl font-bold text-white">Sweet Slice</span>
+          </a>
+          <p class="text-cream-200/70 leading-relaxed">
+            Baking memories since 2010. Handcrafted cakes for every special occasion.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-cream-200 hover:text-rose-400 transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+            <a href="#" class="text-cream-200 hover:text-rose-400 transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            <a href="#" class="text-cream-200 hover:text-rose-400 transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-serif text-lg font-bold text-white mb-6">Quick Links</h4>
+          <ul class="space-y-4">
+            <li><a href="#home" class="nav-link text-cream-200/70 hover:text-rose-400 transition-colors" data-target="home">Home</a></li>
+            <li><a href="#menu" class="nav-link text-cream-200/70 hover:text-rose-400 transition-colors" data-target="home">Menu</a></li>
+            <li><a href="#custom-order" class="nav-link text-cream-200/70 hover:text-rose-400 transition-colors" data-target="home">Custom Order</a></li>
+            <li><a href="#about" class="nav-link text-cream-200/70 hover:text-rose-400 transition-colors" data-target="home">About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-serif text-lg font-bold text-white mb-6">Contact Us</h4>
+          <ul class="space-y-4 text-cream-200/70">
+            <li>123 Bakery Lane</li>
+            <li>Sweet City, SC 12345</li>
+            <li>Phone: (555) 123-4567</li>
+            <li>Email: hello@sweetslice.com</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-serif text-lg font-bold text-white mb-6">Opening Hours</h4>
+          <ul class="space-y-4 text-cream-200/70">
+            <li class="flex justify-between"><span>Mon - Fri:</span> <span>8am - 8pm</span></li>
+            <li class="flex justify-between"><span>Saturday:</span> <span>9am - 6pm</span></li>
+            <li class="flex justify-between"><span>Sunday:</span> <span>Closed</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center text-cream-200/50 text-sm">
+        <p>&copy; <span id="current-year"></span> Sweet Slice Bakery. All rights reserved.</p>
+        <p class="mt-2 text-xs">This is a demo website created for a client project.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./cakejs.js"></script>
+</body>
+</html>
