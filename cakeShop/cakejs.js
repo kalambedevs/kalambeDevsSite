@@ -1,24 +1,48 @@
 // Data
 const categories = [
-  { id: '1', name: 'Wedding Cakes', image: '../Assets/Images/weddingCake.avif' },
-  { id: '2', name: 'Birthday Cakes', image: '../Assets/Images/birthdayCake.avif' },
-  { id: '3', name: 'Cupcakes', image: '../Assets/Images/cupCake.avif' },
-  { id: '4', name: 'Custom Designs', image: '../Assets/Images/customCake.avif' }
+  { 
+    id: '1', 
+    name: 'Signature Celebrations', 
+    description: 'Our most popular, crowd-pleasing cakes for any occasion.',
+    image: 'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&q=80&w=800',
+    video: 'https://videos.pexels.com/video-files/3121459/3121459-uhd_2560_1440_24fps.mp4'
+  },
+  { 
+    id: '2', 
+    name: 'Occasion Gateaux', 
+    description: 'Sophisticated, highly technical mirror-glaze masterpieces.',
+    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=800',
+    video: 'https://videos.pexels.com/video-files/4050296/4050296-uhd_2560_1440_30fps.mp4'
+  },
+  { 
+    id: '3', 
+    name: 'Tasting Assortments', 
+    description: 'A curated tray of high-end, miniature patisserie creations.',
+    image: 'https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&q=80&w=800',
+    video: 'https://videos.pexels.com/video-files/4253125/4253125-uhd_2560_1440_30fps.mp4'
+  },
+  { 
+    id: '4', 
+    name: "The Signature 'Slice' Series", 
+    description: 'An abstract, geometric deconstructed dessert concept.',
+    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=800',
+    video: 'https://videos.pexels.com/video-files/5700987/5700987-uhd_2560_1440_30fps.mp4'
+  }
 ];
 
 const cakes = [
-  { id: '1', name: 'Classic Vanilla Bean', price: 300, category: 'Classic', image: '../Assets/Images/beenCake.jpeg', description: 'Light, fluffy vanilla sponge layered with rich Madagascar vanilla bean buttercream.' },
-  { id: '2', name: 'Dark Chocolate Truffle', price: 450, category: 'Chocolate', image: '../Assets/Images/truffelCake.webp', description: 'Decadent dark chocolate cake with silky chocolate ganache and truffle topping.' },
-  { id: '3', name: 'Strawberry Shortcake', price: 500, category: 'Fruit', image: '../Assets/Images/stroberryCake.jpg', description: 'Fresh strawberries and whipped cream sandwiched between layers of vanilla sponge.' },
-  { id: '4', name: 'Red Velvet Dream', price: 700, category: 'Premium', image: '../Assets/Images/redvelvetCake.jpeg', description: 'Classic red velvet with our signature cream cheese frosting and pecan crumble.' },
-  { id: '5', name: 'Lemon Raspberry', price: 150, category: 'Fruit', image: '../Assets/Images/lemonCupcake.jpg', description: 'Zesty lemon cake filled with tart raspberry compote and lemon buttercream.' },
-  { id: '6', name: 'Caramel Macchiato', price: 650, category: 'Premium', image: '../Assets/Images/caramelCake.webp', description: 'Espresso-infused cake layers with salted caramel filling and coffee buttercream.' }
+  { id: '1', name: 'Classic Vanilla Bean', price: 45, category: 'Classic', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800', description: 'Light, fluffy vanilla sponge layered with rich Madagascar vanilla bean buttercream.' },
+  { id: '2', name: 'Dark Chocolate Truffle', price: 55, category: 'Chocolate', image: 'https://images.unsplash.com/photo-1557925923-33b251dc32d6?auto=format&fit=crop&q=80&w=800', description: 'Decadent dark chocolate cake with silky chocolate ganache and truffle topping.' },
+  { id: '3', name: 'Strawberry Shortcake', price: 50, category: 'Fruit', image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=800', description: 'Fresh strawberries and whipped cream sandwiched between layers of vanilla sponge.' },
+  { id: '4', name: 'Red Velvet Dream', price: 60, category: 'Premium', image: 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?auto=format&fit=crop&q=80&w=800', description: 'Classic red velvet with our signature cream cheese frosting and pecan crumble.' },
+  { id: '5', name: 'Lemon Raspberry', price: 55, category: 'Fruit', image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&q=80&w=800', description: 'Zesty lemon cake filled with tart raspberry compote and lemon buttercream.' },
+  { id: '6', name: 'Caramel Macchiato', price: 65, category: 'Premium', image: 'https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&q=80&w=800', description: 'Espresso-infused cake layers with salted caramel filling and coffee buttercream.' }
 ];
 
 const chefs = [
-  { id: '1', name: 'Isabella Rossi', role: 'Head Pastry Chef', image: '../Assets/Images/chef1.avif', description: 'Trained in Paris, Isabella brings 15 years of classical French pastry experience.' },
-  { id: '2', name: 'Marcus Chen', role: 'Cake Designer', image: '../Assets/Images/chef1.avi2', description: 'An artist turned baker, Marcus specializes in gravity-defying custom sculptures.' },
-  { id: '3', name: 'Sarah Jenkins', role: 'Flavor Specialist', image: '../Assets/Images/chef3.avif', description: 'Sarah is the genius behind our unique flavor combinations and seasonal menus.' }
+  { id: '1', name: 'Isabella Rossi', role: 'Head Pastry Chef', image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&q=80&w=400', description: 'Trained in Paris, Isabella brings 15 years of classical French pastry experience.' },
+  { id: '2', name: 'Marcus Chen', role: 'Cake Designer', image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80&w=400', description: 'An artist turned baker, Marcus specializes in gravity-defying custom sculptures.' },
+  { id: '3', name: 'Sarah Jenkins', role: 'Flavor Specialist', image: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&q=80&w=400', description: 'Sarah is the genius behind our unique flavor combinations and seasonal menus.' }
 ];
 
 // State
@@ -32,7 +56,7 @@ let checkoutState = {
     message: '',
     address: '',
     phone: '',
-    paymentMethod: 'UPI'
+    paymentMethod: 'Credit/Debit Card'
   }
 };
 
@@ -48,70 +72,141 @@ document.addEventListener('DOMContentLoaded', () => {
   setupCart();
   setupCustomOrder();
   setupAnimations();
+  setupCustomScrollbar();
   
   lucide.createIcons();
 });
 
+function setupCustomScrollbar() {
+  const track = document.getElementById('custom-scrollbar-track');
+  const thumb = document.getElementById('custom-scrollbar-thumb');
+  if (!track || !thumb) return;
+  
+  let isScrolling;
+  
+  function updateScrollbar() {
+    const scrollHeight = document.documentElement.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight;
+    const scrollTop = window.scrollY;
+    
+    if (scrollHeight <= clientHeight) {
+      thumb.style.opacity = '0';
+      return;
+    }
+    
+    const thumbHeight = Math.max((clientHeight / scrollHeight) * clientHeight, 40);
+    const maxScrollTop = scrollHeight - clientHeight;
+    const scrollPercentage = scrollTop / maxScrollTop;
+    const thumbTop = scrollPercentage * (clientHeight - thumbHeight);
+    
+    thumb.style.height = `${thumbHeight}px`;
+    thumb.style.transform = `translateY(${thumbTop}px)`;
+    thumb.style.opacity = '1';
+    
+    clearTimeout(isScrolling);
+    isScrolling = setTimeout(() => {
+      thumb.style.opacity = '0';
+    }, 500);
+  }
+  
+  window.addEventListener('scroll', updateScrollbar, { passive: true });
+  window.addEventListener('resize', updateScrollbar);
+  updateScrollbar();
+}
+
 // Rendering Functions
 function renderCategories() {
   const grid = document.getElementById('categories-grid');
-  grid.innerHTML = categories.map((cat, i) => `
-    <div class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 animate-on-scroll delay-${(i % 4 + 1) * 100}">
-      <div class="aspect-[4/5] w-full overflow-hidden">
-        <img src="${cat.image}" alt="${cat.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+  grid.innerHTML = categories.map((cat, i) => {
+    const offsetClass = i % 2 !== 0 ? 'md:mt-24' : '';
+    return `
+      <div class="group relative flex flex-col ${offsetClass} animate-on-scroll delay-${(i % 2 + 1) * 100}">
+        <div class="relative rounded-[2rem] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.15)] transition-all duration-500 hover:-translate-y-2 bg-white border border-[#D4AF37]">
+          <div class="aspect-[4/5] w-full overflow-hidden relative">
+            <img src="${cat.image}" alt="${cat.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 group-hover:brightness-105 transition-all duration-700 z-10" />
+          </div>
+          
+          <div class="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-lg border border-white/50 p-6 rounded-2xl transform translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-20">
+            <h3 class="text-2xl font-serif font-bold text-cocoa mb-2">${cat.name}</h3>
+            <p class="text-sm text-cocoa-light font-light leading-relaxed mb-4 line-clamp-2">${cat.description}</p>
+            <a href="#menu" class="inline-flex items-center justify-center gap-2 bg-transparent border border-pink text-pink hover:bg-pink hover:text-white font-semibold text-sm uppercase tracking-widest px-6 py-3 rounded-full transition-all hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(255,77,108,0.3)] group/btn w-full sm:w-auto">
+              <span>View Collection</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-choco-900/80 via-choco-900/20 to-transparent flex items-end p-6">
-        <h3 class="text-2xl font-serif font-bold text-white group-hover:-translate-y-2 transition-transform duration-300">${cat.name}</h3>
-      </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 }
 
 function renderMenu() {
   const grid = document.getElementById('menu-grid');
   grid.innerHTML = cakes.map((cake, i) => `
-    <div class="bg-cream-50 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group animate-on-scroll delay-${(i % 3 + 1) * 100}">
-      <div class="relative h-64 overflow-hidden">
-        <img src="${cake.image}" alt="${cake.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-rose-500">${cake.category}</div>
+    <article class="group relative bg-white border border-divider rounded-2xl overflow-hidden hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-all duration-500 flex flex-col animate-on-scroll delay-${(i % 3 + 1) * 100}">
+      <div class="relative h-72 overflow-hidden">
+        <img src="${cake.image}" alt="${cake.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-105 transition-all duration-700" />
+        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md border border-divider px-3 py-1 rounded-full text-xs font-medium text-pink tracking-wider uppercase shadow-sm">
+          ${cake.category}
+        </div>
       </div>
       <div class="p-6 flex flex-col flex-grow">
-        <div class="flex justify-between items-start mb-2">
-          <h3 class="text-xl font-serif font-bold text-choco-900 line-clamp-1">${cake.name}</h3>
-          <span class="text-xl font-bold text-rose-500">₹${cake.price}</span>
+        <div class="flex justify-between items-start mb-3">
+          <h3 class="text-xl font-serif font-bold text-cocoa line-clamp-1 transition-colors">${cake.name}</h3>
+          <span class="text-xl font-semibold text-pink">$${cake.price}</span>
         </div>
-        <p class="text-choco-800/70 text-sm mb-6 flex-grow line-clamp-2">${cake.description}</p>
+        <p class="text-cocoa-light text-sm mb-6 flex-grow line-clamp-2 font-light leading-relaxed">${cake.description}</p>
         <div class="flex gap-3 mt-auto">
-          <button onclick="startCheckout('cake', '${cake.id}')" class="flex-1 bg-choco-900 hover:bg-choco-800 text-white py-3 rounded-xl font-medium transition-colors flex items-center justify-center gap-2">
+          <button onclick="startCheckout('cake', '${cake.id}')" class="flex-1 bg-transparent border border-pink text-pink hover:bg-pink hover:text-white py-3 rounded-full font-medium transition-all text-sm uppercase tracking-widest flex items-center justify-center gap-2">
             <i data-lucide="credit-card" class="w-4 h-4"></i> Buy Now
           </button>
-          <button onclick="addToCart('${cake.id}')" class="flex-1 bg-rose-100 hover:bg-rose-200 text-rose-600 py-3 rounded-xl font-medium transition-colors flex items-center justify-center gap-2">
-            <i data-lucide="shopping-bag" class="w-4 h-4"></i> Add to Cart
+          <button onclick="addToCart('${cake.id}')" class="w-12 h-12 flex items-center justify-center bg-pink hover:bg-pink/90 text-white rounded-full transition-colors shrink-0 shadow-md">
+            <i data-lucide="plus" class="w-5 h-5"></i>
           </button>
         </div>
       </div>
-    </div>
+    </article>
   `).join('');
 }
 
 function renderChefs() {
   const grid = document.getElementById('chefs-grid');
   grid.innerHTML = chefs.map((chef, i) => `
-    <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow text-center group animate-on-scroll delay-${(i % 3 + 1) * 100}">
-      <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-4 border-cream-100 group-hover:border-rose-200 transition-colors">
-        <img src="${chef.image}" alt="${chef.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="w-full h-full object-cover" />
+    <div class="bg-white border border-divider rounded-3xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(255,77,108,0.08)] transition-all duration-500 text-center group animate-on-scroll delay-${(i % 3 + 1) * 100}">
+      <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-2 border-transparent group-hover:border-pink transition-colors duration-500 p-1">
+        <img src="${chef.image}" alt="${chef.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="w-full h-full object-cover rounded-full group-hover:brightness-105 transition-all duration-500" />
       </div>
-      <h4 class="text-xl font-serif font-bold text-choco-900 mb-1">${chef.name}</h4>
-      <p class="text-rose-500 font-medium mb-4">${chef.role}</p>
-      <p class="text-choco-800/70 text-sm">${chef.description}</p>
+      <h4 class="text-xl font-serif font-bold text-cocoa mb-2">${chef.name}</h4>
+      <p class="text-pink text-xs uppercase tracking-widest font-semibold mb-4">${chef.role}</p>
+      <p class="text-cocoa-light text-sm font-light leading-relaxed">${chef.description}</p>
     </div>
   `).join('');
 }
 
-// Navigation
-function setupNavigation() {
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
+  // Navigation
+  function setupNavigation() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navTextElements = document.querySelectorAll('.nav-text-color');
+  
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.remove('bg-transparent', 'border-transparent');
+        navbar.classList.add('bg-white/70', 'backdrop-blur-md', 'shadow-sm', 'border-divider');
+        navTextElements.forEach(el => {
+          el.classList.remove('text-white');
+          el.classList.add('text-cocoa');
+        });
+      } else {
+        navbar.classList.add('bg-transparent', 'border-transparent');
+        navbar.classList.remove('bg-white/70', 'backdrop-blur-md', 'shadow-sm', 'border-divider');
+        navTextElements.forEach(el => {
+          el.classList.add('text-white');
+          el.classList.remove('text-cocoa');
+        });
+      }
+    });
 
   mobileMenuBtn.addEventListener('click', () => {
     if (mobileMenu.classList.contains('max-h-0')) {
@@ -208,12 +303,12 @@ function renderCartView() {
   if (cart.length === 0) {
     container.innerHTML = `
       <div class="flex flex-col items-center justify-center text-center py-12">
-        <div class="w-24 h-24 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-6 text-rose-500">
+        <div class="w-24 h-24 bg-white border border-divider rounded-full flex items-center justify-center mx-auto mb-6 text-pink shadow-sm">
           <i data-lucide="shopping-bag" class="w-12 h-12"></i>
         </div>
-        <h2 class="text-3xl font-serif font-bold text-choco-900 mb-4">Your Cart is Empty</h2>
-        <p class="text-choco-800/70 mb-8 max-w-md mx-auto">Looks like you haven't added any delicious cakes yet. Let's fix that!</p>
-        <button onclick="showView('home')" class="inline-flex bg-rose-500 hover:bg-rose-600 text-white font-semibold px-8 py-3 rounded-full shadow-md hover:shadow-lg transition-all">
+        <h2 class="text-3xl font-serif font-bold text-cocoa mb-4">Your Cart is Empty</h2>
+        <p class="text-cocoa-light mb-8 max-w-md mx-auto font-light tracking-wide">Looks like you haven't added any delicious cakes yet. Let's fix that!</p>
+        <button onclick="showView('home')" class="inline-flex bg-transparent border border-pink text-pink hover:bg-pink hover:text-white font-semibold px-8 py-3 rounded-full uppercase tracking-widest text-sm transition-all">
           Browse Menu
         </button>
       </div>
@@ -228,56 +323,56 @@ function renderCartView() {
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
       <div class="lg:col-span-2 space-y-6">
         ${cart.map(item => `
-          <div class="bg-white p-4 sm:p-6 rounded-3xl shadow-sm flex flex-col sm:flex-row items-center gap-6">
-            <div class="w-full sm:w-32 h-32 rounded-2xl overflow-hidden shrink-0">
+          <div class="bg-white border border-divider p-4 sm:p-6 rounded-3xl shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex flex-col sm:flex-row items-center gap-6 transition-all hover:shadow-[0_15px_40px_rgba(0,0,0,0.06)]">
+            <div class="w-full sm:w-32 h-32 rounded-2xl overflow-hidden shrink-0 border border-divider">
               <img src="${item.image}" alt="${item.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="w-full h-full object-cover" />
             </div>
             <div class="flex-grow text-center sm:text-left">
-              <h3 class="text-xl font-serif font-bold text-choco-900 mb-1">${item.name}</h3>
-              <p class="text-rose-500 font-semibold mb-4">$${item.price}</p>
+              <h3 class="text-xl font-serif font-bold text-cocoa mb-1">${item.name}</h3>
+              <p class="text-pink font-semibold mb-4">$${item.price}</p>
               <div class="flex items-center justify-center sm:justify-start gap-4">
-                <div class="flex items-center bg-cream-100 rounded-full p-1">
-                  <button onclick="updateQuantity('${item.id}', ${item.quantity - 1})" class="w-8 h-8 flex items-center justify-center text-choco-800 hover:bg-white rounded-full transition-colors">
+                <div class="flex items-center bg-white border border-divider rounded-full p-1 shadow-sm">
+                  <button onclick="updateQuantity('${item.id}', ${item.quantity - 1})" class="w-8 h-8 flex items-center justify-center text-cocoa-light hover:text-pink hover:bg-pink/10 rounded-full transition-colors">
                     <i data-lucide="minus" class="w-4 h-4"></i>
                   </button>
-                  <span class="w-10 text-center font-medium text-choco-900">${item.quantity}</span>
-                  <button onclick="updateQuantity('${item.id}', ${item.quantity + 1})" class="w-8 h-8 flex items-center justify-center text-choco-800 hover:bg-white rounded-full transition-colors">
+                  <span class="w-10 text-center font-medium text-cocoa">${item.quantity}</span>
+                  <button onclick="updateQuantity('${item.id}', ${item.quantity + 1})" class="w-8 h-8 flex items-center justify-center text-cocoa-light hover:text-pink hover:bg-pink/10 rounded-full transition-colors">
                     <i data-lucide="plus" class="w-4 h-4"></i>
                   </button>
                 </div>
-                <button onclick="removeFromCart('${item.id}')" class="text-choco-800/50 hover:text-rose-500 transition-colors p-2">
+                <button onclick="removeFromCart('${item.id}')" class="text-cocoa-light hover:text-red-500 transition-colors p-2 bg-white border border-divider rounded-full shadow-sm hover:bg-red-50">
                   <i data-lucide="trash-2" class="w-5 h-5"></i>
                 </button>
               </div>
             </div>
-            <div class="text-xl font-bold text-choco-900">
+            <div class="text-xl font-semibold text-cocoa">
               $${(item.price * item.quantity).toFixed(2)}
             </div>
           </div>
         `).join('')}
       </div>
       <div class="lg:col-span-1">
-        <div class="bg-white p-8 rounded-3xl shadow-sm sticky top-28">
-          <h3 class="text-2xl font-serif font-bold text-choco-900 mb-6 border-b border-cream-100 pb-4">Order Summary</h3>
+        <div class="bg-white border border-divider p-8 rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.05)] sticky top-28">
+          <h3 class="text-2xl font-serif font-bold text-cocoa mb-6 border-b border-divider pb-4">Order Summary</h3>
           <div class="space-y-4 mb-8">
-            <div class="flex justify-between text-choco-800">
+            <div class="flex justify-between text-cocoa-light font-light tracking-wide">
               <span>Subtotal</span>
-              <span class="font-medium">$${cartTotal.toFixed(2)}</span>
+              <span class="text-cocoa font-medium">$${cartTotal.toFixed(2)}</span>
             </div>
-            <div class="flex justify-between text-choco-800">
+            <div class="flex justify-between text-cocoa-light font-light tracking-wide">
               <span>Taxes</span>
-              <span class="font-medium">$${(cartTotal * 0.05).toFixed(2)}</span>
+              <span class="text-cocoa font-medium">$${(cartTotal * 0.05).toFixed(2)}</span>
             </div>
-            <div class="flex justify-between text-choco-800">
+            <div class="flex justify-between text-cocoa-light font-light tracking-wide">
               <span>Delivery</span>
-              <span class="font-medium">Calculated at next step</span>
+              <span class="text-cocoa font-medium">Calculated at next step</span>
             </div>
-            <div class="border-t border-cream-100 pt-4 flex justify-between text-xl font-bold text-choco-900">
+            <div class="border-t border-divider pt-4 flex justify-between text-xl font-bold text-pink">
               <span>Total</span>
               <span>$${(cartTotal * 1.05).toFixed(2)}</span>
             </div>
           </div>
-          <button onclick="startCheckout('cart')" class="w-full bg-rose-500 hover:bg-rose-600 text-white font-semibold py-4 rounded-xl shadow-md hover:shadow-lg transition-all flex justify-center items-center gap-2">
+          <button onclick="startCheckout('cart')" class="w-full bg-transparent border border-pink text-pink hover:bg-pink hover:text-white font-semibold py-4 rounded-full uppercase tracking-widest text-sm transition-all flex justify-center items-center gap-2">
             Proceed to Checkout
           </button>
         </div>
@@ -307,7 +402,7 @@ window.startCheckout = function(type, cakeId = null) {
     step: 1,
     type,
     cakeId,
-    data: { size: 'Medium', message: '', address: '', phone: '', paymentMethod: 'UPI' }
+    data: { size: 'Medium', message: '', address: '', phone: '', paymentMethod: 'Credit/Debit Card' }
   };
   showView('checkout');
   renderCheckoutStep();
@@ -334,17 +429,17 @@ function renderCheckoutStep() {
       const label = indicator.querySelector('.step-label');
       
       if (step > s) {
-        circle.className = 'step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-rose-500 text-white';
+        circle.className = 'step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-pink text-white shadow-[0_10px_20px_rgba(255,77,108,0.3)]';
         circle.innerHTML = '<i data-lucide="check-circle-2" class="w-5 h-5"></i>';
-        label.className = 'step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-rose-500';
+        label.className = 'step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-pink';
       } else if (step === s) {
-        circle.className = 'step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-rose-500 text-white';
+        circle.className = 'step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-pink text-white shadow-[0_10px_20px_rgba(255,77,108,0.3)]';
         circle.innerHTML = s;
-        label.className = 'step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-rose-500';
+        label.className = 'step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-pink';
       } else {
-        circle.className = 'step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-white text-choco-800 border-2 border-cream-200';
+        circle.className = 'step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-white text-cocoa-light border border-divider';
         circle.innerHTML = s;
-        label.className = 'step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-choco-800/50';
+        label.className = 'step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-cocoa-light';
       }
     });
 
@@ -380,20 +475,20 @@ function renderCheckoutStep() {
   // Render Step Content
   if (step === 1) {
     content.innerHTML = `
-      <h2 class="text-3xl font-serif font-bold text-choco-900 mb-2">Select Size</h2>
-      <p class="text-choco-800/60 mb-8">Choose the perfect size for your occasion.</p>
+      <h2 class="text-3xl font-serif font-bold text-cocoa mb-2">Select Size</h2>
+      <p class="text-cocoa-light font-light tracking-wide mb-8">Choose the perfect size for your occasion.</p>
       <form id="checkout-form">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
           ${['Small', 'Medium', 'Large'].map(size => `
-            <label class="cursor-pointer rounded-2xl border-2 p-6 text-center transition-all ${data.size === size ? 'border-rose-500 bg-rose-50 shadow-md' : 'border-cream-200 hover:border-rose-300'}">
+            <label class="cursor-pointer rounded-2xl border-2 p-6 text-center transition-all ${data.size === size ? 'border-pink bg-pink/5 shadow-[0_10px_20px_rgba(255,77,108,0.1)]' : 'border-divider hover:border-pink/30 bg-white'}">
               <input type="radio" name="size" value="${size}" ${data.size === size ? 'checked' : ''} class="hidden" onchange="updateCheckoutData('size', this.value)" />
-              <span class="block font-serif text-xl font-bold text-choco-900 mb-1">${size}</span>
-              <span class="text-sm text-choco-800/60">${size === 'Small' ? '0.5 kg (4-6 pax)' : size === 'Medium' ? '1 kg (8-10 pax)' : '2 kg (15-20 pax)'}</span>
+              <span class="block font-serif text-xl font-bold text-cocoa mb-1">${size}</span>
+              <span class="text-sm text-cocoa-light font-light">${size === 'Small' ? '0.5 kg (4-6 pax)' : size === 'Medium' ? '1 kg (8-10 pax)' : '2 kg (15-20 pax)'}</span>
             </label>
           `).join('')}
         </div>
         <div class="flex justify-end">
-          <button type="submit" class="bg-rose-500 hover:bg-rose-600 text-white font-semibold px-8 py-4 rounded-xl shadow-md transition-all flex items-center gap-2">
+          <button type="submit" class="bg-transparent border border-pink text-pink hover:bg-pink hover:text-white font-semibold px-8 py-4 rounded-full uppercase tracking-widest text-sm transition-all flex items-center gap-2">
             Next Step <i data-lucide="chevron-right" class="w-5 h-5"></i>
           </button>
         </div>
@@ -401,16 +496,16 @@ function renderCheckoutStep() {
     `;
   } else if (step === 2) {
     content.innerHTML = `
-      <h2 class="text-3xl font-serif font-bold text-choco-900 mb-2">Add a Message</h2>
-      <p class="text-choco-800/60 mb-8">What would you like written on the cake?</p>
+      <h2 class="text-3xl font-serif font-bold text-cocoa mb-2">Add a Message</h2>
+      <p class="text-cocoa-light font-light tracking-wide mb-8">What would you like written on the cake?</p>
       <form id="checkout-form">
         <div class="mb-10">
-          <label class="block text-sm font-semibold text-choco-900 uppercase tracking-wider mb-3">Cake Message (Optional)</label>
-          <input type="text" placeholder="e.g., Happy Birthday Sarah!" value="${data.message}" oninput="updateCheckoutData('message', this.value); document.getElementById('msg-count').textContent = this.value.length;" maxlength="40" class="w-full bg-cream-50 border border-cream-200 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-rose-400 text-choco-900 text-lg" />
-          <p class="text-right text-xs text-choco-800/50 mt-2"><span id="msg-count">${data.message.length}</span>/40 characters</p>
+          <label class="block text-sm font-semibold text-pink uppercase tracking-widest mb-3">Cake Message (Optional)</label>
+          <input type="text" placeholder="e.g., Happy Birthday Sarah!" value="${data.message}" oninput="updateCheckoutData('message', this.value); document.getElementById('msg-count').textContent = this.value.length;" maxlength="40" class="w-full bg-white border-2 border-divider rounded-xl px-4 py-4 focus:outline-none focus:border-pink text-cocoa text-lg font-light transition-colors placeholder-gray-400" />
+          <p class="text-right text-xs text-cocoa-light mt-2 font-light"><span id="msg-count">${data.message.length}</span>/40 characters</p>
         </div>
         <div class="flex justify-end">
-          <button type="submit" class="bg-rose-500 hover:bg-rose-600 text-white font-semibold px-8 py-4 rounded-xl shadow-md transition-all flex items-center gap-2">
+          <button type="submit" class="bg-transparent border border-pink text-pink hover:bg-pink hover:text-white font-semibold px-8 py-4 rounded-full uppercase tracking-widest text-sm transition-all flex items-center gap-2">
             Next Step <i data-lucide="chevron-right" class="w-5 h-5"></i>
           </button>
         </div>
@@ -418,19 +513,19 @@ function renderCheckoutStep() {
     `;
   } else if (step === 3) {
     content.innerHTML = `
-      <h2 class="text-3xl font-serif font-bold text-choco-900 mb-2">Delivery Details</h2>
-      <p class="text-choco-800/60 mb-8">Where should we send this sweet treat?</p>
+      <h2 class="text-3xl font-serif font-bold text-cocoa mb-2">Delivery Details</h2>
+      <p class="text-cocoa-light font-light tracking-wide mb-8">Where should we send this sweet treat?</p>
       <form id="checkout-form" class="space-y-6">
         <div>
-          <label class="block text-sm font-semibold text-choco-900 uppercase tracking-wider mb-3">Full Address</label>
-          <textarea required rows="3" placeholder="Street address, apartment, city, zip code" onchange="updateCheckoutData('address', this.value)" class="w-full bg-cream-50 border border-cream-200 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-rose-400 text-choco-900 resize-none">${data.address}</textarea>
+          <label class="block text-sm font-semibold text-pink uppercase tracking-widest mb-3">Full Address</label>
+          <textarea required rows="3" placeholder="Street address, apartment, city, zip code" onchange="updateCheckoutData('address', this.value)" class="w-full bg-white border-2 border-divider rounded-xl px-4 py-4 focus:outline-none focus:border-pink text-cocoa font-light resize-none transition-colors placeholder-gray-400">${data.address}</textarea>
         </div>
         <div class="mb-10">
-          <label class="block text-sm font-semibold text-choco-900 uppercase tracking-wider mb-3">Contact Number</label>
-          <input required type="tel" placeholder="+1 (555) 000-0000" value="${data.phone}" onchange="updateCheckoutData('phone', this.value)" class="w-full bg-cream-50 border border-cream-200 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-rose-400 text-choco-900" />
+          <label class="block text-sm font-semibold text-pink uppercase tracking-widest mb-3">Contact Number</label>
+          <input required type="tel" placeholder="+1 (555) 000-0000" value="${data.phone}" onchange="updateCheckoutData('phone', this.value)" class="w-full bg-white border-2 border-divider rounded-xl px-4 py-4 focus:outline-none focus:border-pink text-cocoa font-light transition-colors placeholder-gray-400" />
         </div>
         <div class="flex justify-end">
-          <button type="submit" class="bg-rose-500 hover:bg-rose-600 text-white font-semibold px-8 py-4 rounded-xl shadow-md transition-all flex items-center gap-2">
+          <button type="submit" class="bg-transparent border border-pink text-pink hover:bg-pink hover:text-white font-semibold px-8 py-4 rounded-full uppercase tracking-widest text-sm transition-all flex items-center gap-2">
             Next Step <i data-lucide="chevron-right" class="w-5 h-5"></i>
           </button>
         </div>
@@ -438,32 +533,32 @@ function renderCheckoutStep() {
     `;
   } else if (step === 4) {
     content.innerHTML = `
-      <h2 class="text-3xl font-serif font-bold text-choco-900 mb-2">Payment</h2>
-      <p class="text-choco-800/60 mb-8">Secure your order with a 50% advance payment.</p>
+      <h2 class="text-3xl font-serif font-bold text-cocoa mb-2">Payment</h2>
+      <p class="text-cocoa-light font-light tracking-wide mb-8">Secure your order with a 50% advance payment.</p>
       
-      <div class="bg-cream-50 rounded-2xl p-6 mb-8 border border-cream-200">
+      <div class="bg-white border-2 border-divider rounded-2xl p-6 mb-8">
         <div class="flex justify-between items-center mb-2">
-          <span class="text-choco-800">Total Amount:</span>
-          <span class="font-bold text-choco-900">$${finalPrice.toFixed(2)}</span>
+          <span class="text-cocoa-light font-light tracking-wide">Total Amount:</span>
+          <span class="font-medium text-cocoa">$${finalPrice.toFixed(2)}</span>
         </div>
         <div class="flex justify-between items-center text-lg">
-          <span class="font-serif font-bold text-choco-900">Advance Required (50%):</span>
-          <span class="font-bold text-rose-500 text-2xl">$${advancePayment.toFixed(2)}</span>
+          <span class="font-serif font-bold text-cocoa">Advance Required (50%):</span>
+          <span class="font-bold text-pink text-2xl">$${advancePayment.toFixed(2)}</span>
         </div>
       </div>
 
       <form id="checkout-form">
         <div class="space-y-4 mb-10">
-          <label class="block text-sm font-semibold text-choco-900 uppercase tracking-wider mb-3">Select Payment Method</label>
+          <label class="block text-sm font-semibold text-pink uppercase tracking-widest mb-3">Select Payment Method</label>
           ${['UPI', 'Credit/Debit Card'].map(method => `
-            <label class="flex items-center p-4 border rounded-xl cursor-pointer transition-all ${data.paymentMethod === method ? 'border-rose-500 bg-rose-50' : 'border-cream-200 hover:bg-cream-50'}">
-              <input type="radio" name="payment" value="${method}" ${data.paymentMethod === method ? 'checked' : ''} onchange="updateCheckoutData('paymentMethod', this.value)" class="w-5 h-5 text-rose-500 focus:ring-rose-500 border-gray-300" />
-              <span class="ml-4 font-medium text-choco-900">${method}</span>
+            <label class="flex items-center p-4 border-2 rounded-xl cursor-pointer transition-all ${data.paymentMethod === method ? 'border-pink bg-pink/5 shadow-[0_5px_15px_rgba(255,77,108,0.1)]' : 'border-divider hover:border-pink/30 bg-white'}">
+              <input type="radio" name="payment" value="${method}" ${data.paymentMethod === method ? 'checked' : ''} onchange="updateCheckoutData('paymentMethod', this.value)" class="w-5 h-5 text-pink focus:ring-pink border-divider bg-white" />
+              <span class="ml-4 font-medium tracking-wide text-cocoa">${method}</span>
             </label>
           `).join('')}
         </div>
         <div class="flex justify-end">
-          <button type="submit" class="w-full sm:w-auto bg-rose-500 hover:bg-rose-600 text-white font-bold text-lg px-12 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+          <button type="submit" class="w-full sm:w-auto bg-transparent border border-pink text-pink hover:bg-pink hover:text-white font-semibold px-12 py-4 rounded-full uppercase tracking-widest text-sm transition-all">
             Place Order
           </button>
         </div>
@@ -472,17 +567,17 @@ function renderCheckoutStep() {
   } else if (step === 5) {
     content.innerHTML = `
       <div class="text-center">
-        <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-500">
+        <div class="w-24 h-24 bg-white border-2 border-pink rounded-full flex items-center justify-center mx-auto mb-6 text-pink shadow-[0_10px_30px_rgba(255,77,108,0.2)]">
           <i data-lucide="check-circle-2" class="w-12 h-12"></i>
         </div>
-        <h2 class="text-4xl font-serif font-bold text-choco-900 mb-4">Order Placed!</h2>
-        <div class="bg-rose-50 border border-rose-200 rounded-2xl p-6 mb-8 inline-block max-w-md mx-auto">
-          <p class="text-rose-600 font-medium text-lg leading-relaxed">
+        <h2 class="text-4xl font-serif font-bold text-cocoa mb-4">Order Placed!</h2>
+        <div class="bg-pink/5 border border-pink/20 rounded-2xl p-6 mb-8 inline-block max-w-md mx-auto">
+          <p class="text-pink font-medium tracking-wide text-lg leading-relaxed">
             "This is not a real website. This is a replica/demo created for a client project."
           </p>
         </div>
-        <p class="text-choco-800/70 mb-8">Thank you for trying out the checkout flow.</p>
-        <button onclick="showView('home')" class="bg-choco-900 hover:bg-choco-800 text-white font-semibold px-8 py-4 rounded-full shadow-md transition-all">
+        <p class="text-cocoa-light font-light tracking-wide mb-8">Thank you for trying out the checkout flow.</p>
+        <button onclick="showView('home')" class="bg-transparent border border-pink text-pink hover:bg-pink hover:text-white font-semibold px-8 py-4 rounded-full uppercase tracking-widest text-sm transition-all">
           Return to Home
         </button>
       </div>
