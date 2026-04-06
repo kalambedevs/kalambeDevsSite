@@ -23,7 +23,7 @@
       --color-glass: rgba(255, 255, 255, 0.7);
     }
   </style>
-  <link rel="stylesheet" href="cakecss.css" />
+  <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-sans text-cocoa bg-[#F0F8FF] flex flex-col min-h-screen">
@@ -166,9 +166,9 @@
             <p class="text-cocoa tracking-wide font-light max-w-2xl mx-auto">An immersive journey to create your perfect centerpiece.</p>
           </div>
 
-          <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch min-h-[650px] animate-on-scroll">
+          <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch min-h-[650px]">
             <!-- Left Side: Real-Time Preview (60%) -->
-            <div class="lg:w-[60%] relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-white group">
+            <div class="lg:w-[60%] relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-white group slide-in-left animate-on-scroll">
               <div class="absolute inset-0 z-0">
                 <img id="configurator-preview-image" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=1200" alt="Cake Preview" class="w-full h-full object-cover transition-all duration-1000" />
                 <video id="configurator-preview-video-1" src="Firefly Extreme macro cinematography...mp4" muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700"></video>
@@ -176,10 +176,33 @@
               </div>
               
               <!-- Preview Overlay -->
-              <div class="absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-transparent to-black/20 p-12 flex flex-col justify-between pointer-events-none">
-                <div class="flex justify-between items-start">
+              <div class="absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-transparent to-black/20 p-8 md:p-12 flex flex-col justify-between pointer-events-none">
+                <div class="flex justify-between items-start w-full">
                   <div class="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-2 rounded-full">
                     <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#F0F8FF]">Live Preview</span>
+                  </div>
+                  
+                  <!-- Live Receipt Card -->
+                  <div class="bg-white/90 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-2xl max-w-[220px] text-right pointer-events-auto transition-all duration-500 transform translate-x-8 opacity-0" id="live-receipt">
+                    <h4 class="text-xs font-bold text-cocoa uppercase tracking-widest mb-4 border-b border-divider pb-2">Your Artisan Cake</h4>
+                    <div class="space-y-3 text-cocoa">
+                      <div class="flex flex-col items-end gap-1">
+                        <span class="text-[9px] uppercase tracking-wider opacity-60">Occasion</span>
+                        <span class="font-serif italic font-medium text-sm" id="receipt-occasion">--</span>
+                      </div>
+                      <div class="flex flex-col items-end gap-1">
+                        <span class="text-[9px] uppercase tracking-wider opacity-60">Flavor</span>
+                        <span class="font-serif italic font-medium text-sm" id="receipt-flavor">--</span>
+                      </div>
+                      <div class="flex flex-col items-end gap-1">
+                        <span class="text-[9px] uppercase tracking-wider opacity-60">Sweetness</span>
+                        <span class="font-serif italic font-medium text-sm" id="receipt-sweetness">Balanced</span>
+                      </div>
+                      <div class="flex flex-col items-end gap-1">
+                        <span class="text-[9px] uppercase tracking-wider opacity-60">Richness</span>
+                        <span class="font-serif italic font-medium text-sm" id="receipt-richness">Classic</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
@@ -191,7 +214,7 @@
             </div>
 
             <!-- Right Side: Selection Panel (40%) -->
-            <div class="lg:w-[40%] flex flex-col">
+            <div class="lg:w-[40%] flex flex-col slide-in-right animate-on-scroll delay-200">
               <div class="bg-white/80 backdrop-blur-xl rounded-[3rem] p-10 md:p-12 shadow-2xl border border-white/20 flex-grow flex flex-col relative overflow-hidden">
                 <!-- Decorative element -->
                 <div class="absolute -top-24 -right-24 w-48 h-48 bg-pink/5 rounded-full blur-3xl"></div>
@@ -209,7 +232,7 @@
                     
                     <div class="grid grid-cols-3 gap-6" id="occasion-options">
                       <button type="button" data-value="Birthday" class="occasion-tile group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
-                        <div class="w-full aspect-square rounded-full bg-white border-2 border-divider flex items-center justify-center transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink group-[.selected]:bg-pink/5 shadow-xl relative overflow-hidden">
+                        <div class="w-full aspect-square rounded-[2rem] bg-white border-2 border-divider flex items-center justify-center transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink group-[.selected]:bg-pink/5 shadow-xl relative overflow-hidden">
                           <div class="absolute inset-0 bg-pink opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
                           <i data-lucide="cake" class="w-10 h-10 text-cocoa group-hover:text-pink group-[.selected]:text-pink transition-all duration-300 group-hover:scale-110"></i>
                         </div>
@@ -217,7 +240,7 @@
                       </button>
                       
                       <button type="button" data-value="Wedding" class="occasion-tile group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
-                        <div class="w-full aspect-square rounded-full bg-white border-2 border-divider flex items-center justify-center transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink group-[.selected]:bg-pink/5 shadow-xl relative overflow-hidden">
+                        <div class="w-full aspect-square rounded-[2rem] bg-white border-2 border-divider flex items-center justify-center transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink group-[.selected]:bg-pink/5 shadow-xl relative overflow-hidden">
                           <div class="absolute inset-0 bg-pink opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
                           <i data-lucide="heart" class="w-10 h-10 text-cocoa group-hover:text-pink group-[.selected]:text-pink transition-all duration-300 group-hover:scale-110"></i>
                         </div>
@@ -225,7 +248,7 @@
                       </button>
                       
                       <button type="button" data-value="Anniversary" class="occasion-tile group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
-                        <div class="w-full aspect-square rounded-full bg-white border-2 border-divider flex items-center justify-center transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink group-[.selected]:bg-pink/5 shadow-xl relative overflow-hidden">
+                        <div class="w-full aspect-square rounded-[2rem] bg-white border-2 border-divider flex items-center justify-center transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink group-[.selected]:bg-pink/5 shadow-xl relative overflow-hidden">
                           <div class="absolute inset-0 bg-pink opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
                           <i data-lucide="sparkles" class="w-10 h-10 text-cocoa group-hover:text-pink group-[.selected]:text-pink transition-all duration-300 group-hover:scale-110"></i>
                         </div>
@@ -246,37 +269,76 @@
                     
                     <div class="grid grid-cols-3 gap-6" id="flavor-options">
                       <button type="button" data-value="Vanilla Bean" class="flavor-item group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
-                        <div class="w-full aspect-square rounded-[2rem] overflow-hidden border-2 border-divider transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink shadow-xl relative">
-                          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=200" alt="Vanilla" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                        <div class="w-full aspect-square rounded-full overflow-hidden border-2 border-divider transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink shadow-xl relative">
+                          <img src="/assets/vanilla-bean.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=200';" alt="Vanilla" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                           <div class="absolute inset-0 bg-pink/10 opacity-0 group-[.selected]:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Vanilla</span>
                       </button>
                       
                       <button type="button" data-value="Rich Chocolate" class="flavor-item group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
-                        <div class="w-full aspect-square rounded-[2rem] overflow-hidden border-2 border-divider transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink shadow-xl relative">
-                          <img src="https://images.unsplash.com/photo-1557925923-33b251dc32d6?auto=format&fit=crop&q=80&w=200" alt="Chocolate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                        <div class="w-full aspect-square rounded-full overflow-hidden border-2 border-divider transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink shadow-xl relative">
+                          <img src="/assets/chocolate-cake.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1557925923-33b251dc32d6?auto=format&fit=crop&q=80&w=200';" alt="Chocolate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                           <div class="absolute inset-0 bg-pink/10 opacity-0 group-[.selected]:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Chocolate</span>
                       </button>
                       
                       <button type="button" data-value="Strawberry" class="flavor-item group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
-                        <div class="w-full aspect-square rounded-[2rem] overflow-hidden border-2 border-divider transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink shadow-xl relative">
-                          <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=200" alt="Strawberry" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                        <div class="w-full aspect-square rounded-full overflow-hidden border-2 border-divider transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink shadow-xl relative">
+                          <img src="/assets/strawberry-cake.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=200';" alt="Strawberry" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                           <div class="absolute inset-0 bg-pink/10 opacity-0 group-[.selected]:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Strawberry</span>
                       </button>
                     </div>
                   </div>
+                  <!-- Step 3: Flavor Profile -->
+                  <div class="space-y-8">
+                    <div class="flex flex-col gap-2">
+                      <div class="flex items-center gap-4">
+                        <span class="w-10 h-10 rounded-full bg-pink text-white flex items-center justify-center text-sm font-bold shadow-lg shadow-pink/20">03</span>
+                        <h4 class="text-xl font-serif font-bold text-cocoa uppercase tracking-[0.2em]">Flavor Profile</h4>
+                      </div>
+                      <p class="text-xs text-cocoa-light font-medium ml-14">Tailor your bespoke experience</p>
+                    </div>
+                    
+                    <div class="space-y-8 ml-14">
+                      <!-- Sweetness Slider -->
+                      <div class="space-y-4">
+                        <div class="flex justify-between text-xs font-bold text-cocoa uppercase tracking-widest">
+                          <span>Sweetness</span>
+                          <span id="sweetness-label" class="text-pink">Balanced</span>
+                        </div>
+                        <input type="range" id="sweetness-slider" min="1" max="3" value="2" class="w-full h-1.5 bg-divider rounded-lg appearance-none cursor-pointer accent-pink outline-none">
+                        <div class="flex justify-between text-[10px] text-cocoa-light uppercase tracking-wider">
+                          <span>Subtle</span>
+                          <span>Balanced</span>
+                          <span>Decadent</span>
+                        </div>
+                      </div>
+                      
+                      <!-- Richness Slider -->
+                      <div class="space-y-4">
+                        <div class="flex justify-between text-xs font-bold text-cocoa uppercase tracking-widest">
+                          <span>Richness</span>
+                          <span id="richness-label" class="text-pink">Classic</span>
+                        </div>
+                        <input type="range" id="richness-slider" min="1" max="3" value="2" class="w-full h-1.5 bg-divider rounded-lg appearance-none cursor-pointer accent-pink outline-none">
+                        <div class="flex justify-between text-[10px] text-cocoa-light uppercase tracking-wider">
+                          <span>Light</span>
+                          <span>Classic</span>
+                          <span>Intense</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="pt-12 mt-auto relative z-10">
-                  <button id="configurator-continue" class="w-full group relative overflow-hidden bg-transparent border-2 border-pink text-pink font-bold text-sm uppercase tracking-[0.3em] py-6 rounded-full transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,77,108,0.3)]">
-                    <div class="absolute inset-0 bg-pink translate-y-full group-hover:translate-y-0 transition-transform duration-500 -z-10"></div>
-                    <span class="relative z-10 group-hover:text-[#F0F8FF] transition-colors duration-300">Continue to Details</span>
-                    <div class="absolute inset-0 border-2 border-pink rounded-full opacity-0 group-hover:opacity-100 animate-pulse-glow pointer-events-none"></div>
+                  <button id="configurator-continue" class="w-full group relative overflow-hidden bg-transparent border-2 border-pink text-pink font-bold text-sm uppercase tracking-[0.3em] py-6 rounded-full transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,77,108,0.3)] opacity-50">
+                    <div class="liquid-fill"></div>
+                    <span class="relative z-10 group-hover:text-[#F0F8FF] transition-colors duration-300">Request Quote</span>
                   </button>
                 </div>
               </div>
@@ -420,6 +482,6 @@
     </div>
   </footer>
 
-  <script src="cakejs.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

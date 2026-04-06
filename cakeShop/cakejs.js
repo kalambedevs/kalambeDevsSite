@@ -2,27 +2,45 @@
 const categories = [
   { 
     id: '1', 
-    name: 'Signature Celebrations', 
-    description: 'Our most popular, crowd-pleasing cakes for any occasion.',
-    image: 'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&q=80&w=800'
+    name: 'Birthday Cakes', 
+    description: 'Celebrate another beautiful year with our custom-designed, flavor-packed birthday masterpieces.',
+    image: '/assets/birthday-cakes.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&q=80&w=800'
   },
   { 
     id: '2', 
-    name: 'Occasion Gateaux', 
-    description: 'Sophisticated, highly technical mirror-glaze masterpieces.',
-    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=800'
+    name: 'Wedding Cakes', 
+    description: 'Timeless elegance for your most special day, crafted with delicate layers and artisanal detail.',
+    image: '/assets/wedding-cakes.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&q=80&w=800'
   },
   { 
     id: '3', 
-    name: 'Tasting Assortments', 
-    description: 'A curated tray of high-end, miniature patisserie creations.',
-    image: 'https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&q=80&w=800'
+    name: 'Anniversary Cakes', 
+    description: 'Commemorate your journey together with a cake as sweet and enduring as your love story.',
+    image: '/assets/anniversary-cakes.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&q=80&w=800'
   },
   { 
     id: '4', 
-    name: "The Signature 'Slice' Series", 
-    description: 'An abstract, geometric deconstructed dessert concept.',
-    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=800'
+    name: 'Cupcakes', 
+    description: 'Bite-sized perfection. Our gourmet cupcakes are small in size but massive in artisan flavor.',
+    image: '/assets/cupcakes.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&q=80&w=800'
+  },
+  { 
+    id: '5', 
+    name: 'Cookies', 
+    description: 'Freshly baked, chewy, and loaded with premium chocolate for the ultimate comfort treat.',
+    image: '/assets/cookies.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&q=80&w=800'
+  },
+  { 
+    id: '6', 
+    name: 'Pastries', 
+    description: 'Experience the crisp, buttery layers of our authentic, hand-rolled European-style pastries.',
+    image: '/assets/pastries.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&q=80&w=800'
   }
 ];
 
@@ -32,9 +50,10 @@ const cakes = [
     name: 'Signature Gateaux', 
     price: 55, 
     category: 'Signature', 
-    image: 'https://images.unsplash.com/photo-1557925923-33b251dc32d6?auto=format&fit=crop&q=80&w=800', 
+    image: '/assets/signature-gateaux.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1557925923-33b251dc32d6?auto=format&fit=crop&q=80&w=800', 
     description: 'Decadent dark chocolate cake with silky chocolate ganache and truffle topping.',
-    video: 'Firefly Extreme macro cinematography...mp4',
+    video: '/assets/videos/chocolate-macro.mp4',
     badge: 'Limited Edition',
     gridClass: 'lg:col-span-2 lg:row-span-1'
   },
@@ -43,22 +62,23 @@ const cakes = [
     name: 'Gourmet Toppings', 
     price: 50, 
     category: 'Gourmet', 
-    image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=800', 
+    image: '/assets/gourmet-toppings.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=800', 
     description: 'Fresh strawberries and whipped cream sandwiched between layers of vanilla sponge.',
-    video: 'PixVerse_V5.6_Image_Text_360P...mp4',
+    video: '/assets/videos/strawberry-macro.mp4',
     badge: 'Limited Edition',
     gridClass: 'lg:col-span-2 lg:row-span-1'
   },
-  { id: '3', name: 'Lemon Raspberry', price: 55, category: 'Fruit', image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&q=80&w=800', description: 'Zesty lemon cake filled with tart raspberry compote and lemon buttercream.' },
-  { id: '4', name: 'Caramel Macchiato', price: 65, category: 'Premium', image: 'https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&q=80&w=800', description: 'Espresso-infused cake layers with salted caramel filling and coffee buttercream.' },
-  { id: '5', name: 'Classic Vanilla Bean', price: 45, category: 'Classic', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800', description: 'Light, fluffy vanilla sponge layered with rich Madagascar vanilla bean buttercream.' },
-  { id: '6', name: 'Artisan Decor', price: 60, category: 'Premium', image: 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?auto=format&fit=crop&q=80&w=800', description: 'Classic red velvet with our signature cream cheese frosting and pecan crumble.' }
+  { id: '3', name: 'Lemon Raspberry', price: 55, category: 'Fruit', image: '/assets/lemon-raspberry.jpg', fallbackImage: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&q=80&w=800', description: 'Zesty lemon cake filled with tart raspberry compote and lemon buttercream.' },
+  { id: '4', name: 'Caramel Macchiato', price: 65, category: 'Premium', image: '/assets/caramel-macchiato.jpg', fallbackImage: 'https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&q=80&w=800', description: 'Espresso-infused cake layers with salted caramel filling and coffee buttercream.' },
+  { id: '5', name: 'Classic Vanilla Bean', price: 45, category: 'Classic', image: '/assets/classic-vanilla.jpg', fallbackImage: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800', description: 'Light, fluffy vanilla sponge layered with rich Madagascar vanilla bean buttercream.' },
+  { id: '6', name: 'Artisan Decor', price: 60, category: 'Premium', image: '/assets/artisan-decor.jpg', fallbackImage: 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?auto=format&fit=crop&q=80&w=800', description: 'Classic red velvet with our signature cream cheese frosting and pecan crumble.' }
 ];
 
 const chefs = [
-  { id: '1', name: 'Isabella Rossi', role: 'Head Pastry Chef', image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&q=80&w=400', description: 'Trained in Paris, Isabella brings 15 years of classical French pastry experience.' },
-  { id: '2', name: 'Marcus Chen', role: 'Cake Designer', image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80&w=400', description: 'An artist turned baker, Marcus specializes in gravity-defying custom sculptures.' },
-  { id: '3', name: 'Sarah Jenkins', role: 'Flavor Specialist', image: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&q=80&w=400', description: 'Sarah is the genius behind our unique flavor combinations and seasonal menus.' }
+  { id: '1', name: 'Isabella Rossi', role: 'Head Pastry Chef', image: '/assets/chef-isabella.jpg', fallbackImage: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&q=80&w=400', description: 'Trained in Paris, Isabella brings 15 years of classical French pastry experience.' },
+  { id: '2', name: 'Marcus Chen', role: 'Cake Designer', image: '/assets/chef-marcus.jpg', fallbackImage: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80&w=400', description: 'An artist turned baker, Marcus specializes in gravity-defying custom sculptures.' },
+  { id: '3', name: 'Sarah Jenkins', role: 'Flavor Specialist', image: '/assets/chef-sarah.jpg', fallbackImage: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&q=80&w=400', description: 'Sarah is the genius behind our unique flavor combinations and seasonal menus.' }
 ];
 
 // State
@@ -147,7 +167,7 @@ function renderCategories() {
       <div class="group relative flex flex-col ${offsetClass} animate-on-scroll delay-${(i % 2 + 1) * 100}">
         <div class="relative rounded-[2rem] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 bg-white border border-divider">
           <div class="aspect-[4/5] w-full overflow-hidden relative">
-            <img src="${cat.image}" alt="${cat.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-700 z-10" />
+            <img src="${cat.image}" alt="${cat.name}" onerror="this.onerror=null; this.src='${cat.fallbackImage || 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800'}';" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-700 z-10" />
             <!-- Subtle Dark Gradient Overlay for Readability -->
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-[15] opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
@@ -175,16 +195,16 @@ function renderMenu() {
         <div class="relative h-full rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 bg-white flex flex-col hover:-translate-y-2">
           <!-- Image/Video Container (70%) -->
           <div class="relative h-[70%] overflow-hidden">
-            <img src="${cake.image}" alt="${cake.name}" class="absolute inset-0 w-full h-full object-cover transition-all duration-700 z-10 group-hover:opacity-0 group-hover:scale-105" />
-            ${isVideo ? `<video src="${cake.video}" muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0"></video>` : ''}
+            <img src="${cake.image}" alt="${cake.name}" onerror="this.onerror=null; this.src='${cake.fallbackImage || 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800'}';" class="absolute inset-0 w-full h-full object-cover transition-all duration-700 z-10 group-hover:scale-105" />
+            ${isVideo ? `<video src="${cake.video}" onerror="this.style.display='none';" muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-20"></video>` : ''}
             
             <!-- Content Overlay (On Image) -->
-            <div class="absolute inset-0 z-20 flex flex-col justify-end p-8 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+            <div class="absolute inset-0 z-30 flex flex-col justify-end p-8 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
               <h3 class="text-3xl font-serif font-bold text-[#F0F8FF] mb-2">${cake.name}</h3>
               <p class="text-sm font-sans text-[#F0F8FF]/90 mb-6 line-clamp-2 leading-relaxed">${cake.description}</p>
-              <div class="flex items-center justify-between">
+              <div class="flex flex-col gap-6 mt-auto pt-4">
                 <span class="text-2xl font-semibold text-[#F0F8FF]">$${cake.price}</span>
-                <a href="#menu" class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-[#F0F8FF] text-[#F0F8FF] font-semibold text-xs uppercase tracking-widest px-6 py-3 rounded-full transition-all hover:bg-[#F0F8FF] hover:text-cocoa group/btn">
+                <a href="#menu" class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-[#F0F8FF] text-[#F0F8FF] font-semibold text-xs uppercase tracking-widest px-6 py-3 rounded-full transition-all hover:bg-[#F0F8FF] hover:text-cocoa group/btn w-full sm:w-auto self-start mt-2">
                   <span>View Collection</span>
                   <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
                 </a>
@@ -193,10 +213,10 @@ function renderMenu() {
           </div>
           
           <!-- Bottom Part (30%) - Pure White Base -->
-          <div class="h-[30%] bg-white p-8 flex flex-col justify-center">
+          <div class="h-[30%] bg-white p-8 flex flex-col justify-center z-30 relative">
              <div class="flex items-center gap-2 mb-2">
                <div class="w-8 h-[1px] bg-pink/30"></div>
-               <span class="text-[10px] text-cocoa/40 uppercase tracking-[0.3em] font-bold">Artisan Series</span>
+               <span class="text-[10px] text-cocoa/60 uppercase tracking-[0.3em] font-bold">Artisan Series</span>
              </div>
              <div class="flex items-center justify-between">
                <span class="text-xs font-serif font-bold text-cocoa tracking-widest uppercase">Handcrafted</span>
@@ -258,7 +278,7 @@ function renderChefs() {
   grid.innerHTML = chefs.map((chef, i) => `
     <div class="bg-white border border-divider rounded-3xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(255,77,108,0.08)] transition-all duration-500 text-center group animate-on-scroll delay-${(i % 3 + 1) * 100}">
       <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-2 border-transparent group-hover:border-pink transition-colors duration-500 p-1">
-        <img src="${chef.image}" alt="${chef.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="w-full h-full object-cover rounded-full group-hover:brightness-105 transition-all duration-500" />
+        <img src="${chef.image}" alt="${chef.name}" onerror="this.onerror=null; this.src='${chef.fallbackImage || 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800'}';" class="w-full h-full object-cover rounded-full group-hover:brightness-105 transition-all duration-500" />
       </div>
       <h4 class="text-xl font-serif font-bold text-cocoa mb-2">${chef.name}</h4>
       <p class="text-pink text-xs uppercase tracking-widest font-semibold mb-4">${chef.role}</p>
@@ -436,7 +456,7 @@ function renderCartView() {
         ${cart.map(item => `
           <div class="bg-white border border-divider p-4 sm:p-6 rounded-3xl shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex flex-col sm:flex-row items-center gap-6 transition-all hover:shadow-[0_15px_40px_rgba(0,0,0,0.06)]">
             <div class="w-full sm:w-32 h-32 rounded-2xl overflow-hidden shrink-0 border border-divider">
-              <img src="${item.image}" alt="${item.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="w-full h-full object-cover" />
+              <img src="${item.image}" alt="${item.name}" onerror="this.onerror=null; this.src='${item.fallbackImage || 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800'}';" class="w-full h-full object-cover" />
             </div>
             <div class="flex-grow text-center sm:text-left">
               <h3 class="text-xl font-serif font-bold text-cocoa mb-1">${item.name}</h3>
@@ -505,22 +525,39 @@ function setupCustomOrder() {
   const previewTitle = document.getElementById('preview-title');
   const previewDesc = document.getElementById('preview-desc');
   
+  const sweetnessSlider = document.getElementById('sweetness-slider');
+  const sweetnessLabel = document.getElementById('sweetness-label');
+  const richnessSlider = document.getElementById('richness-slider');
+  const richnessLabel = document.getElementById('richness-label');
+  
+  const receiptOccasion = document.getElementById('receipt-occasion');
+  const receiptFlavor = document.getElementById('receipt-flavor');
+  const receiptSweetness = document.getElementById('receipt-sweetness');
+  const receiptRichness = document.getElementById('receipt-richness');
+  const liveReceipt = document.getElementById('live-receipt');
+  
+  const sweetnessLevels = { '1': 'Subtle', '2': 'Balanced', '3': 'Decadent' };
+  const richnessLevels = { '1': 'Light', '2': 'Classic', '3': 'Intense' };
+  
   let selectedOccasion = '';
   let selectedFlavor = '';
   
   const flavorData = {
     'Vanilla Bean': {
-      image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=1200',
+      image: '/assets/vanilla-bean-preview.jpg',
+      fallbackImage: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=1200',
       title: 'Pure Vanilla Bean',
       desc: 'Madagascar vanilla bean sponge with silky buttercream.'
     },
     'Rich Chocolate': {
-      image: 'https://images.unsplash.com/photo-1557925923-33b251dc32d6?auto=format&fit=crop&q=80&w=1200',
+      image: '/assets/chocolate-cake-preview.jpg',
+      fallbackImage: 'https://images.unsplash.com/photo-1557925923-33b251dc32d6?auto=format&fit=crop&q=80&w=1200',
       title: 'Midnight Chocolate',
       desc: '70% dark Belgian chocolate with ganache layers.'
     },
     'Strawberry': {
-      image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=1200',
+      image: '/assets/strawberry-cake-preview.jpg',
+      fallbackImage: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=1200',
       title: 'Summer Strawberry',
       desc: 'Fresh farm-picked strawberries with light whipped cream.'
     }
@@ -529,17 +566,27 @@ function setupCustomOrder() {
   function updatePreview() {
     if (selectedFlavor) {
       const data = flavorData[selectedFlavor];
+      previewImg.onerror = () => { previewImg.src = data.fallbackImage; };
       previewImg.src = data.image;
       previewTitle.textContent = data.title;
       previewDesc.textContent = data.desc;
     }
     
+    // Update Receipt
+    if (selectedOccasion || selectedFlavor) {
+      liveReceipt.classList.remove('opacity-0', 'translate-x-8');
+      liveReceipt.classList.add('opacity-100', 'translate-x-0');
+    }
+    
+    receiptOccasion.textContent = selectedOccasion || '--';
+    receiptFlavor.textContent = selectedFlavor || '--';
+    
     if (selectedOccasion && selectedFlavor) {
-      continueBtn.classList.add('bg-pink', 'text-[#F0F8FF]');
-      continueBtn.classList.remove('text-pink');
+      continueBtn.classList.add('shadow-[0_0_30px_rgba(255,77,108,0.4)]');
+      continueBtn.classList.remove('opacity-50');
     } else {
-      continueBtn.classList.remove('bg-pink', 'text-[#F0F8FF]');
-      continueBtn.classList.add('text-pink');
+      continueBtn.classList.remove('shadow-[0_0_30px_rgba(255,77,108,0.4)]');
+      continueBtn.classList.add('opacity-50');
     }
   }
 
@@ -558,8 +605,11 @@ function setupCustomOrder() {
     
     tile.addEventListener('mouseleave', () => {
       video2.classList.remove('opacity-100');
-      video2.pause();
-      video2.currentTime = 0;
+      setTimeout(() => {
+        if (!video2.classList.contains('opacity-100')) {
+          video2.pause();
+        }
+      }, 700);
     });
   });
 
@@ -569,6 +619,18 @@ function setupCustomOrder() {
       item.classList.add('selected');
       selectedFlavor = item.dataset.value;
       updatePreview();
+      
+      // Trigger 2-second clip
+      video1.classList.add('opacity-100');
+      video1.play().catch(err => console.log("Video play blocked:", err));
+      setTimeout(() => {
+        if (!item.matches(':hover')) {
+          video1.classList.remove('opacity-100');
+          setTimeout(() => {
+            video1.pause();
+          }, 700);
+        }
+      }, 2000);
     });
     
     item.addEventListener('mouseenter', () => {
@@ -578,9 +640,24 @@ function setupCustomOrder() {
     
     item.addEventListener('mouseleave', () => {
       video1.classList.remove('opacity-100');
-      video1.pause();
-      video1.currentTime = 0;
+      setTimeout(() => {
+        if (!video1.classList.contains('opacity-100')) {
+          video1.pause();
+        }
+      }, 700);
     });
+  });
+
+  sweetnessSlider.addEventListener('input', (e) => {
+    const val = sweetnessLevels[e.target.value];
+    sweetnessLabel.textContent = val;
+    receiptSweetness.textContent = val;
+  });
+
+  richnessSlider.addEventListener('input', (e) => {
+    const val = richnessLevels[e.target.value];
+    richnessLabel.textContent = val;
+    receiptRichness.textContent = val;
   });
 
   continueBtn.addEventListener('click', () => {
@@ -588,7 +665,12 @@ function setupCustomOrder() {
       alert('Please select both an occasion and a flavor.');
       return;
     }
-    checkoutState.customData = { category: selectedOccasion, flavor: selectedFlavor };
+    checkoutState.customData = { 
+      category: selectedOccasion, 
+      flavor: selectedFlavor,
+      sweetness: sweetnessLevels[sweetnessSlider.value],
+      richness: richnessLevels[richnessSlider.value]
+    };
     startCheckout('custom');
   });
 }
