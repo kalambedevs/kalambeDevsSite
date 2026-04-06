@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sweet Slice Bakery</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <style type="text/tailwindcss">
     @theme {
@@ -26,115 +23,87 @@
       --color-glass: rgba(255, 255, 255, 0.7);
     }
   </style>
-  <link rel="stylesheet" href="cakecss.css" />
+  <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
 <body class="font-sans text-cocoa bg-[#F0F8FF] flex flex-col min-h-screen">
-
+  
   <!-- Custom Scrollbar -->
   <div id="custom-scrollbar-track" class="fixed top-0 right-0 w-2 h-full z-[100] pointer-events-none">
-    <div id="custom-scrollbar-thumb"
-      class="absolute top-0 right-0 w-full bg-cocoa/50 rounded-full opacity-0 transition-opacity duration-300"></div>
+    <div id="custom-scrollbar-thumb" class="absolute top-0 right-0 w-full bg-cocoa/50 rounded-full opacity-0 transition-opacity duration-300"></div>
   </div>
 
   <!-- Navbar -->
   <nav id="navbar" class="fixed w-full bg-transparent z-50 transition-all duration-300 border-b border-transparent">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
-        <a href="#" class="nav-link flex items-center gap-2 nav-text-color text-white transition-colors"
-          data-target="home">
+        <a href="#" class="nav-link flex items-center gap-2 nav-text-color text-white transition-colors" data-target="home">
           <i data-lucide="cake-slice"></i>
           <span class="font-serif text-2xl font-bold tracking-wider uppercase">Sweet Slice</span>
         </a>
         <div class="hidden md:flex space-x-8">
-          <a href="#home"
-            class="nav-link nav-text-color text-white hover:text-pink font-medium transition-colors tracking-wide text-sm uppercase"
-            data-target="home">Home</a>
-          <a href="#menu"
-            class="nav-link nav-text-color text-white hover:text-pink font-medium transition-colors tracking-wide text-sm uppercase"
-            data-target="home">Menu</a>
-          <a href="#custom-order"
-            class="nav-link nav-text-color text-white hover:text-pink font-medium transition-colors tracking-wide text-sm uppercase"
-            data-target="home">Custom Order</a>
-          <a href="#about"
-            class="nav-link nav-text-color text-white hover:text-pink font-medium transition-colors tracking-wide text-sm uppercase"
-            data-target="home">About Us</a>
+          <a href="#home" class="nav-link nav-text-color text-white hover:text-pink font-medium transition-colors tracking-wide text-sm uppercase" data-target="home">Home</a>
+          <a href="#menu" class="nav-link nav-text-color text-white hover:text-pink font-medium transition-colors tracking-wide text-sm uppercase" data-target="home">Menu</a>
+          <a href="#custom-order" class="nav-link nav-text-color text-white hover:text-pink font-medium transition-colors tracking-wide text-sm uppercase" data-target="home">Custom Order</a>
+          <a href="#about" class="nav-link nav-text-color text-white hover:text-pink font-medium transition-colors tracking-wide text-sm uppercase" data-target="home">About Us</a>
         </div>
         <div class="flex items-center gap-4">
           <button id="cart-btn" class="relative p-2 nav-text-color text-white hover:text-pink transition-colors">
             <i data-lucide="shopping-bag"></i>
-            <span id="cart-badge"
-              class="absolute top-0 right-0 bg-pink text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center transform translate-x-1/4 -translate-y-1/4 hidden">0</span>
+            <span id="cart-badge" class="absolute top-0 right-0 bg-pink text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center transform translate-x-1/4 -translate-y-1/4 hidden">0</span>
           </button>
-          <button id="mobile-menu-btn"
-            class="md:hidden p-2 nav-text-color text-white hover:text-pink transition-colors">
+          <button id="mobile-menu-btn" class="md:hidden p-2 nav-text-color text-white hover:text-pink transition-colors">
             <i data-lucide="menu"></i>
           </button>
         </div>
       </div>
     </div>
-
+    
     <!-- Mobile Menu -->
-    <div id="mobile-menu"
-      class="md:hidden absolute w-full left-0 top-20 bg-white/95 backdrop-blur-xl border-b border-divider overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+    <div id="mobile-menu" class="md:hidden absolute w-full left-0 top-20 bg-white/95 backdrop-blur-xl border-b border-divider overflow-hidden transition-all duration-300 max-h-0 opacity-0">
       <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
-        <a href="#home"
-          class="nav-link block px-3 py-2 text-cocoa hover:text-pink hover:bg-pink/5 rounded-md font-medium transition-colors uppercase tracking-wide text-sm"
-          data-target="home">Home</a>
-        <a href="#menu"
-          class="nav-link block px-3 py-2 text-cocoa hover:text-pink hover:bg-pink/5 rounded-md font-medium transition-colors uppercase tracking-wide text-sm"
-          data-target="home">Menu</a>
-        <a href="#custom-order"
-          class="nav-link block px-3 py-2 text-cocoa hover:text-pink hover:bg-pink/5 rounded-md font-medium transition-colors uppercase tracking-wide text-sm"
-          data-target="home">Custom Order</a>
-        <a href="#about"
-          class="nav-link block px-3 py-2 text-cocoa hover:text-pink hover:bg-pink/5 rounded-md font-medium transition-colors uppercase tracking-wide text-sm"
-          data-target="home">About Us</a>
+        <a href="#home" class="nav-link block px-3 py-2 text-cocoa hover:text-pink hover:bg-pink/5 rounded-md font-medium transition-colors uppercase tracking-wide text-sm" data-target="home">Home</a>
+        <a href="#menu" class="nav-link block px-3 py-2 text-cocoa hover:text-pink hover:bg-pink/5 rounded-md font-medium transition-colors uppercase tracking-wide text-sm" data-target="home">Menu</a>
+        <a href="#custom-order" class="nav-link block px-3 py-2 text-cocoa hover:text-pink hover:bg-pink/5 rounded-md font-medium transition-colors uppercase tracking-wide text-sm" data-target="home">Custom Order</a>
+        <a href="#about" class="nav-link block px-3 py-2 text-cocoa hover:text-pink hover:bg-pink/5 rounded-md font-medium transition-colors uppercase tracking-wide text-sm" data-target="home">About Us</a>
       </div>
     </div>
   </nav>
 
   <!-- Main Content -->
   <main id="app-container" class="flex-grow">
-
+    
     <!-- Home View -->
     <div id="view-home" class="view-section active">
-
+      
       <!-- Hero / Content Structure -->
       <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden bg-cocoa">
         <!-- Background Video -->
         <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <iframe
-            class="absolute top-1/2 left-1/2 w-[300%] h-[300%] -translate-x-1/2 -translate-y-1/2 md:w-[150%] md:h-[150%] lg:w-[115%] lg:h-[115%] object-cover"
-            src="https://www.youtube.com/embed/kDQV05jAP5c?autoplay=1&mute=1&loop=1&controls=0&rel=0&playlist=kDQV05jAP5c&enablejsapi=1"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin">
+          <iframe 
+            src="https://www.youtube.com/embed/kDQV05jAP5c?autoplay=1&mute=1&loop=1&playlist=kDQV05jAP5c&controls=0&showinfo=0&rel=0&modestbranding=1&enablejsapi=1" 
+            class="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 video-fade-in" 
+            frameborder="0" 
+            allow="autoplay; fullscreen" 
+            allowfullscreen>
           </iframe>
-
+          <!-- Dark Overlay -->
           <div class="absolute inset-0 bg-black/60"></div>
         </div>
+        
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center animate-on-scroll">
           <p class="text-pink font-semibold tracking-widest uppercase text-sm mb-6">Boutique Patisserie</p>
-          <h1
-            class="text-5xl sm:text-6xl md:text-7xl font-serif font-bold text-white mb-6 leading-[1.1] tracking-tight">
-            ARTISANSHIP IN <br /> EVERY LAYER
+          <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif font-bold text-white mb-6 leading-[1.1] tracking-tight">
+            ARTISANSHIP IN <br/> EVERY LAYER
           </h1>
-          <p
-            class="text-lg md:text-xl text-white/90 mb-10 font-sans font-light tracking-wide leading-relaxed max-w-2xl mx-auto">
-            Experience the pinnacle of culinary craftsmanship. Our bespoke creations are baked with premium ingredients,
-            featuring moist crumb textures and glistening glazes.
+          <p class="text-lg md:text-xl text-white/90 mb-10 font-sans font-light tracking-wide leading-relaxed max-w-2xl mx-auto">
+            Experience the pinnacle of culinary craftsmanship. Our bespoke creations are baked with premium ingredients, featuring moist crumb textures and glistening glazes.
           </p>
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#menu"
-              class="nav-link inline-flex items-center justify-center bg-pink hover:bg-pink-hover text-white font-semibold text-sm uppercase tracking-widest px-10 py-4 rounded-full transition-all hover:-translate-y-1 w-full sm:w-auto btn-glow"
-              data-target="home">
+            <a href="#menu" class="nav-link inline-flex items-center justify-center bg-pink hover:bg-pink-hover text-white font-semibold text-sm uppercase tracking-widest px-10 py-4 rounded-full transition-all hover:-translate-y-1 w-full sm:w-auto btn-glow" data-target="home">
               Order Now
             </a>
-            <a href="#about"
-              class="nav-link inline-flex items-center justify-center bg-transparent border border-white text-white hover:bg-white hover:text-cocoa font-semibold text-sm uppercase tracking-widest px-10 py-4 rounded-full transition-all hover:-translate-y-1 w-full sm:w-auto"
-              data-target="home">
+            <a href="#about" class="nav-link inline-flex items-center justify-center bg-transparent border border-white text-white hover:bg-white hover:text-cocoa font-semibold text-sm uppercase tracking-widest px-10 py-4 rounded-full transition-all hover:-translate-y-1 w-full sm:w-auto" data-target="home">
               Our Story
             </a>
           </div>
@@ -145,20 +114,17 @@
       <section class="relative z-20 -mt-12 mb-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div
-              class="flex flex-col items-center justify-center p-8 rounded-2xl bg-gradient-to-b from-white to-[#FFFDF0] shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-black/5 animate-on-scroll">
+            <div class="flex flex-col items-center justify-center p-8 rounded-2xl bg-gradient-to-b from-white to-[#FFFDF0] shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-black/5 animate-on-scroll">
               <i data-lucide="gift" class="w-8 h-8 text-pink mb-4"></i>
               <span class="text-2xl font-serif font-bold text-cocoa mb-1">500+</span>
               <span class="text-xs text-cocoa-light uppercase tracking-widest font-medium">Celebrations</span>
             </div>
-            <div
-              class="flex flex-col items-center justify-center p-8 rounded-2xl bg-gradient-to-b from-white to-[#FFFDF0] shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-black/5 animate-on-scroll delay-100">
+            <div class="flex flex-col items-center justify-center p-8 rounded-2xl bg-gradient-to-b from-white to-[#FFFDF0] shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-black/5 animate-on-scroll delay-100">
               <i data-lucide="star" class="w-8 h-8 text-pink mb-4"></i>
               <span class="text-2xl font-serif font-bold text-cocoa mb-1">4.9/5</span>
               <span class="text-xs text-cocoa-light uppercase tracking-widest font-medium">Client Rating</span>
             </div>
-            <div
-              class="flex flex-col items-center justify-center p-8 rounded-2xl bg-gradient-to-b from-white to-[#FFFDF0] shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-black/5 animate-on-scroll delay-200">
+            <div class="flex flex-col items-center justify-center p-8 rounded-2xl bg-gradient-to-b from-white to-[#FFFDF0] shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-black/5 animate-on-scroll delay-200">
               <i data-lucide="clock" class="w-8 h-8 text-pink mb-4"></i>
               <span class="text-2xl font-serif font-bold text-cocoa mb-1">24hr</span>
               <span class="text-xs text-cocoa-light uppercase tracking-widest font-medium">Fresh Guarantee</span>
@@ -173,11 +139,9 @@
           <div class="text-center mb-16 animate-on-scroll">
             <h2 class="text-4xl md:text-5xl font-serif font-bold text-cocoa mb-4">Our Categories</h2>
             <div class="w-16 h-[1px] bg-pink/20 mx-auto mb-6"></div>
-            <p class="text-cocoa tracking-wide font-light max-w-2xl mx-auto">Explore our diverse range of artisanal
-              creations.</p>
+            <p class="text-cocoa tracking-wide font-light max-w-2xl mx-auto">Explore our diverse range of artisanal creations.</p>
           </div>
-          <div id="categories-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-24 items-start">
-          </div>
+          <div id="categories-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-24 items-start"></div>
         </div>
       </section>
 
@@ -187,8 +151,7 @@
           <div class="text-center mb-16 animate-on-scroll">
             <h2 class="text-4xl md:text-5xl font-serif font-bold text-cocoa mb-4">The Collection</h2>
             <div class="w-16 h-[1px] bg-pink/20 mx-auto mb-6"></div>
-            <p class="text-cocoa tracking-wide font-light max-w-2xl mx-auto italic font-serif">Curated masterpieces for
-              the discerning palate.</p>
+            <p class="text-cocoa tracking-wide font-light max-w-2xl mx-auto italic font-serif">Curated masterpieces for the discerning palate.</p>
           </div>
           <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 auto-rows-[300px]"></div>
         </div>
@@ -200,102 +163,73 @@
           <div class="text-center mb-16 animate-on-scroll">
             <h2 class="text-4xl md:text-5xl font-serif font-bold text-cocoa mb-4">Design Your Dream Cake</h2>
             <div class="w-16 h-[1px] bg-pink/20 mx-auto mb-6"></div>
-            <p class="text-cocoa tracking-wide font-light max-w-2xl mx-auto">An immersive journey to create your perfect
-              centerpiece.</p>
+            <p class="text-cocoa tracking-wide font-light max-w-2xl mx-auto">An immersive journey to create your perfect centerpiece.</p>
           </div>
 
           <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch min-h-[650px] animate-on-scroll">
             <!-- Left Side: Real-Time Preview (60%) -->
             <div class="lg:w-[60%] relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-white group">
               <div class="absolute inset-0 z-0">
-                <img id="configurator-preview-image"
-                  src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=1200"
-                  alt="Cake Preview" class="w-full h-full object-cover transition-all duration-1000" />
-                <video id="configurator-preview-video-1" src="Firefly Extreme macro cinematography...mp4" muted loop
-                  playsinline
-                  class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700"></video>
-                <video id="configurator-preview-video-2" src="PixVerse_V5.6_Image_Text_360P...mp4" muted loop
-                  playsinline
-                  class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700"></video>
+                <img id="configurator-preview-image" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=1200" alt="Cake Preview" class="w-full h-full object-cover transition-all duration-1000" />
+                <video id="configurator-preview-video-1" src="Firefly Extreme macro cinematography...mp4" muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700"></video>
+                <video id="configurator-preview-video-2" src="PixVerse_V5.6_Image_Text_360P...mp4" muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700"></video>
               </div>
-
+              
               <!-- Preview Overlay -->
-              <div
-                class="absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-transparent to-black/20 p-12 flex flex-col justify-between pointer-events-none">
+              <div class="absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-transparent to-black/20 p-12 flex flex-col justify-between pointer-events-none">
                 <div class="flex justify-between items-start">
                   <div class="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-2 rounded-full">
                     <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#F0F8FF]">Live Preview</span>
                   </div>
                 </div>
-
+                
                 <div class="space-y-2">
                   <h3 id="preview-title" class="text-4xl font-serif font-bold text-[#F0F8FF]">Your Masterpiece</h3>
-                  <p id="preview-desc" class="text-[#F0F8FF]/80 font-light tracking-wide max-w-md">Select your
-                    preferences to see your creation come to life.</p>
+                  <p id="preview-desc" class="text-[#F0F8FF]/80 font-light tracking-wide max-w-md">Select your preferences to see your creation come to life.</p>
                 </div>
               </div>
             </div>
 
             <!-- Right Side: Selection Panel (40%) -->
             <div class="lg:w-[40%] flex flex-col">
-              <div
-                class="bg-white/80 backdrop-blur-xl rounded-[3rem] p-10 md:p-12 shadow-2xl border border-white/20 flex-grow flex flex-col relative overflow-hidden">
+              <div class="bg-white/80 backdrop-blur-xl rounded-[3rem] p-10 md:p-12 shadow-2xl border border-white/20 flex-grow flex flex-col relative overflow-hidden">
                 <!-- Decorative element -->
                 <div class="absolute -top-24 -right-24 w-48 h-48 bg-pink/5 rounded-full blur-3xl"></div>
-
+                
                 <div id="configurator-steps" class="flex-grow space-y-16 relative z-10">
                   <!-- Step 1: Occasion -->
                   <div class="space-y-8">
                     <div class="flex flex-col gap-2">
                       <div class="flex items-center gap-4">
-                        <span
-                          class="w-10 h-10 rounded-full bg-pink text-white flex items-center justify-center text-sm font-bold shadow-lg shadow-pink/20">01</span>
+                        <span class="w-10 h-10 rounded-full bg-pink text-white flex items-center justify-center text-sm font-bold shadow-lg shadow-pink/20">01</span>
                         <h4 class="text-xl font-serif font-bold text-cocoa uppercase tracking-[0.2em]">The Occasion</h4>
                       </div>
                       <p class="text-xs text-cocoa-light font-medium ml-14">Select the heart of your celebration</p>
                     </div>
-
+                    
                     <div class="grid grid-cols-3 gap-6" id="occasion-options">
-                      <button type="button" data-value="Birthday"
-                        class="occasion-tile group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
-                        <div
-                          class="w-full aspect-square rounded-full bg-white border-2 border-divider flex items-center justify-center transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink group-[.selected]:bg-pink/5 shadow-xl relative overflow-hidden">
-                          <div
-                            class="absolute inset-0 bg-pink opacity-0 group-hover:opacity-5 transition-opacity duration-300">
-                          </div>
-                          <i data-lucide="cake"
-                            class="w-10 h-10 text-cocoa group-hover:text-pink group-[.selected]:text-pink transition-all duration-300 group-hover:scale-110"></i>
+                      <button type="button" data-value="Birthday" class="occasion-tile group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
+                        <div class="w-full aspect-square rounded-full bg-white border-2 border-divider flex items-center justify-center transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink group-[.selected]:bg-pink/5 shadow-xl relative overflow-hidden">
+                          <div class="absolute inset-0 bg-pink opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                          <i data-lucide="cake" class="w-10 h-10 text-cocoa group-hover:text-pink group-[.selected]:text-pink transition-all duration-300 group-hover:scale-110"></i>
                         </div>
-                        <span
-                          class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Birthday</span>
+                        <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Birthday</span>
                       </button>
-
-                      <button type="button" data-value="Wedding"
-                        class="occasion-tile group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
-                        <div
-                          class="w-full aspect-square rounded-full bg-white border-2 border-divider flex items-center justify-center transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink group-[.selected]:bg-pink/5 shadow-xl relative overflow-hidden">
-                          <div
-                            class="absolute inset-0 bg-pink opacity-0 group-hover:opacity-5 transition-opacity duration-300">
-                          </div>
-                          <i data-lucide="heart"
-                            class="w-10 h-10 text-cocoa group-hover:text-pink group-[.selected]:text-pink transition-all duration-300 group-hover:scale-110"></i>
+                      
+                      <button type="button" data-value="Wedding" class="occasion-tile group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
+                        <div class="w-full aspect-square rounded-full bg-white border-2 border-divider flex items-center justify-center transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink group-[.selected]:bg-pink/5 shadow-xl relative overflow-hidden">
+                          <div class="absolute inset-0 bg-pink opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                          <i data-lucide="heart" class="w-10 h-10 text-cocoa group-hover:text-pink group-[.selected]:text-pink transition-all duration-300 group-hover:scale-110"></i>
                         </div>
-                        <span
-                          class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Wedding</span>
+                        <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Wedding</span>
                       </button>
-
-                      <button type="button" data-value="Anniversary"
-                        class="occasion-tile group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
-                        <div
-                          class="w-full aspect-square rounded-full bg-white border-2 border-divider flex items-center justify-center transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink group-[.selected]:bg-pink/5 shadow-xl relative overflow-hidden">
-                          <div
-                            class="absolute inset-0 bg-pink opacity-0 group-hover:opacity-5 transition-opacity duration-300">
-                          </div>
-                          <i data-lucide="sparkles"
-                            class="w-10 h-10 text-cocoa group-hover:text-pink group-[.selected]:text-pink transition-all duration-300 group-hover:scale-110"></i>
+                      
+                      <button type="button" data-value="Anniversary" class="occasion-tile group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
+                        <div class="w-full aspect-square rounded-full bg-white border-2 border-divider flex items-center justify-center transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink group-[.selected]:bg-pink/5 shadow-xl relative overflow-hidden">
+                          <div class="absolute inset-0 bg-pink opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                          <i data-lucide="sparkles" class="w-10 h-10 text-cocoa group-hover:text-pink group-[.selected]:text-pink transition-all duration-300 group-hover:scale-110"></i>
                         </div>
-                        <span
-                          class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Anniversary</span>
+                        <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Anniversary</span>
                       </button>
                     </div>
                   </div>
@@ -304,76 +238,45 @@
                   <div class="space-y-8">
                     <div class="flex flex-col gap-2">
                       <div class="flex items-center gap-4">
-                        <span
-                          class="w-10 h-10 rounded-full bg-pink text-white flex items-center justify-center text-sm font-bold shadow-lg shadow-pink/20">02</span>
+                        <span class="w-10 h-10 rounded-full bg-pink text-white flex items-center justify-center text-sm font-bold shadow-lg shadow-pink/20">02</span>
                         <h4 class="text-xl font-serif font-bold text-cocoa uppercase tracking-[0.2em]">Base Flavor</h4>
                       </div>
                       <p class="text-xs text-cocoa-light font-medium ml-14">Choose your premium foundation</p>
                     </div>
-
+                    
                     <div class="grid grid-cols-3 gap-6" id="flavor-options">
-                      <button type="button" data-value="Vanilla Bean"
-                        class="flavor-item group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
-                        <div
-                          class="w-full aspect-square rounded-[2rem] overflow-hidden border-2 border-divider transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink shadow-xl relative">
-                          <img
-                            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=200"
-                            alt="Vanilla"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                          <div
-                            class="absolute inset-0 bg-pink/10 opacity-0 group-[.selected]:opacity-100 transition-opacity duration-300">
-                          </div>
+                      <button type="button" data-value="Vanilla Bean" class="flavor-item group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
+                        <div class="w-full aspect-square rounded-[2rem] overflow-hidden border-2 border-divider transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink shadow-xl relative">
+                          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=200" alt="Vanilla" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                          <div class="absolute inset-0 bg-pink/10 opacity-0 group-[.selected]:opacity-100 transition-opacity duration-300"></div>
                         </div>
-                        <span
-                          class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Vanilla</span>
+                        <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Vanilla</span>
                       </button>
-
-                      <button type="button" data-value="Rich Chocolate"
-                        class="flavor-item group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
-                        <div
-                          class="w-full aspect-square rounded-[2rem] overflow-hidden border-2 border-divider transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink shadow-xl relative">
-                          <img
-                            src="https://images.unsplash.com/photo-1557925923-33b251dc32d6?auto=format&fit=crop&q=80&w=200"
-                            alt="Chocolate"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                          <div
-                            class="absolute inset-0 bg-pink/10 opacity-0 group-[.selected]:opacity-100 transition-opacity duration-300">
-                          </div>
+                      
+                      <button type="button" data-value="Rich Chocolate" class="flavor-item group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
+                        <div class="w-full aspect-square rounded-[2rem] overflow-hidden border-2 border-divider transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink shadow-xl relative">
+                          <img src="https://images.unsplash.com/photo-1557925923-33b251dc32d6?auto=format&fit=crop&q=80&w=200" alt="Chocolate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                          <div class="absolute inset-0 bg-pink/10 opacity-0 group-[.selected]:opacity-100 transition-opacity duration-300"></div>
                         </div>
-                        <span
-                          class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Chocolate</span>
+                        <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Chocolate</span>
                       </button>
-
-                      <button type="button" data-value="Strawberry"
-                        class="flavor-item group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
-                        <div
-                          class="w-full aspect-square rounded-[2rem] overflow-hidden border-2 border-divider transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink shadow-xl relative">
-                          <img
-                            src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=200"
-                            alt="Strawberry"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                          <div
-                            class="absolute inset-0 bg-pink/10 opacity-0 group-[.selected]:opacity-100 transition-opacity duration-300">
-                          </div>
+                      
+                      <button type="button" data-value="Strawberry" class="flavor-item group flex flex-col items-center gap-4 transition-all hover:-translate-y-1">
+                        <div class="w-full aspect-square rounded-[2rem] overflow-hidden border-2 border-divider transition-all duration-500 group-hover:border-pink group-[.selected]:border-pink shadow-xl relative">
+                          <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=200" alt="Strawberry" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                          <div class="absolute inset-0 bg-pink/10 opacity-0 group-[.selected]:opacity-100 transition-opacity duration-300"></div>
                         </div>
-                        <span
-                          class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Strawberry</span>
+                        <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-cocoa-light group-hover:text-pink group-[.selected]:text-pink transition-colors">Strawberry</span>
                       </button>
                     </div>
                   </div>
                 </div>
 
                 <div class="pt-12 mt-auto relative z-10">
-                  <button id="configurator-continue"
-                    class="w-full group relative overflow-hidden bg-transparent border-2 border-pink text-pink font-bold text-sm uppercase tracking-[0.3em] py-6 rounded-full transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,77,108,0.3)]">
-                    <div
-                      class="absolute inset-0 bg-pink translate-y-full group-hover:translate-y-0 transition-transform duration-500 -z-10">
-                    </div>
-                    <span class="relative z-10 group-hover:text-[#F0F8FF] transition-colors duration-300">Continue to
-                      Details</span>
-                    <div
-                      class="absolute inset-0 border-2 border-pink rounded-full opacity-0 group-hover:opacity-100 animate-pulse-glow pointer-events-none">
-                    </div>
+                  <button id="configurator-continue" class="w-full group relative overflow-hidden bg-transparent border-2 border-pink text-pink font-bold text-sm uppercase tracking-[0.3em] py-6 rounded-full transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,77,108,0.3)]">
+                    <div class="absolute inset-0 bg-pink translate-y-full group-hover:translate-y-0 transition-transform duration-500 -z-10"></div>
+                    <span class="relative z-10 group-hover:text-[#F0F8FF] transition-colors duration-300">Continue to Details</span>
+                    <div class="absolute inset-0 border-2 border-pink rounded-full opacity-0 group-hover:opacity-100 animate-pulse-glow pointer-events-none"></div>
                   </button>
                 </div>
               </div>
@@ -391,26 +294,17 @@
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 animate-on-scroll">
             <div class="rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-divider">
-              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=1000"
-                alt="Bakery Interior"
-                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';"
-                class="w-full h-full object-cover hover:brightness-105 transition-all duration-500" />
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=1000" alt="Bakery Interior" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="w-full h-full object-cover hover:brightness-105 transition-all duration-500" />
             </div>
             <div class="space-y-8">
               <h3 class="text-3xl font-serif font-bold text-cocoa">Baked with Passion Since 2010</h3>
-              <p class="text-lg text-cocoa font-light leading-relaxed tracking-wide">What started as a small family
-                kitchen has blossomed into a beloved local patisserie. At Sweet Slice, we believe that every celebration
-                deserves a centerpiece that looks as incredible as it tastes.</p>
-              <p class="text-lg text-cocoa font-light leading-relaxed tracking-wide">We source only the finest
-                ingredients—from rich Belgian chocolate to fresh, locally grown berries. Our team of passionate bakers
-                and decorators pour their hearts into every creation, ensuring your special moments are truly
-                unforgettable.</p>
+              <p class="text-lg text-cocoa font-light leading-relaxed tracking-wide">What started as a small family kitchen has blossomed into a beloved local patisserie. At Sweet Slice, we believe that every celebration deserves a centerpiece that looks as incredible as it tastes.</p>
+              <p class="text-lg text-cocoa font-light leading-relaxed tracking-wide">We source only the finest ingredients—from rich Belgian chocolate to fresh, locally grown berries. Our team of passionate bakers and decorators pour their hearts into every creation, ensuring your special moments are truly unforgettable.</p>
             </div>
           </div>
           <div class="text-center mb-16 animate-on-scroll">
             <h3 class="text-3xl font-serif font-bold text-cocoa mb-4">Meet Our Master Chefs</h3>
-            <p class="text-cocoa font-light tracking-wide max-w-2xl mx-auto">The artists behind our delicious creations.
-            </p>
+            <p class="text-cocoa font-light tracking-wide max-w-2xl mx-auto">The artists behind our delicious creations.</p>
           </div>
           <div id="chefs-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
         </div>
@@ -421,9 +315,7 @@
     <div id="view-cart" class="view-section hidden pt-24 pb-16 bg-[#F0F8FF] min-h-[80vh]">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center gap-4 mb-10">
-          <button
-            class="nav-link text-cocoa-light hover:text-pink p-2 bg-white border border-divider rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-colors"
-            data-target="home">
+          <button class="nav-link text-cocoa-light hover:text-pink p-2 bg-white border border-divider rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-colors" data-target="home">
             <i data-lucide="arrow-left"></i>
           </button>
           <h1 class="text-4xl font-serif font-bold text-cocoa">Your Cart</h1>
@@ -436,46 +328,31 @@
     <div id="view-checkout" class="view-section hidden pt-24 pb-16 bg-[#F0F8FF] min-h-[80vh]">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div id="checkout-header" class="mb-12">
-          <button id="checkout-back-btn"
-            class="inline-flex items-center gap-2 text-cocoa-light hover:text-pink mb-8 font-light tracking-wide transition-colors">
+          <button id="checkout-back-btn" class="inline-flex items-center gap-2 text-cocoa-light hover:text-pink mb-8 font-light tracking-wide transition-colors">
             <i data-lucide="arrow-left" class="w-5 h-5"></i>
             <span id="checkout-back-text">Back</span>
           </button>
-
+          
           <!-- Progress Bar -->
           <div class="flex items-center justify-between relative">
             <div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-[1px] bg-divider z-0"></div>
-            <div id="checkout-progress"
-              class="absolute left-0 top-1/2 -translate-y-1/2 h-[1px] bg-pink z-0 transition-all duration-500 shadow-[0_0_10px_rgba(255,77,108,0.3)]"
-              style="width: 0%"></div>
-
+            <div id="checkout-progress" class="absolute left-0 top-1/2 -translate-y-1/2 h-[1px] bg-pink z-0 transition-all duration-500 shadow-[0_0_10px_rgba(255,77,108,0.3)]" style="width: 0%"></div>
+            
             <div class="checkout-step-indicator relative z-10 flex flex-col items-center gap-2" data-step="1">
-              <div
-                class="step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-pink text-white shadow-[0_10px_20px_rgba(255,77,108,0.3)]">
-                1</div>
-              <span
-                class="step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-pink">Size</span>
+              <div class="step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-pink text-white shadow-[0_10px_20px_rgba(255,77,108,0.3)]">1</div>
+              <span class="step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-pink">Size</span>
             </div>
             <div class="checkout-step-indicator relative z-10 flex flex-col items-center gap-2" data-step="2">
-              <div
-                class="step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-white text-cocoa-light border border-divider">
-                2</div>
-              <span
-                class="step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-cocoa-light">Message</span>
+              <div class="step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-white text-cocoa-light border border-divider">2</div>
+              <span class="step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-cocoa-light">Message</span>
             </div>
             <div class="checkout-step-indicator relative z-10 flex flex-col items-center gap-2" data-step="3">
-              <div
-                class="step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-white text-cocoa-light border border-divider">
-                3</div>
-              <span
-                class="step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-cocoa-light">Delivery</span>
+              <div class="step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-white text-cocoa-light border border-divider">3</div>
+              <span class="step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-cocoa-light">Delivery</span>
             </div>
             <div class="checkout-step-indicator relative z-10 flex flex-col items-center gap-2" data-step="4">
-              <div
-                class="step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-white text-cocoa-light border border-divider">
-                4</div>
-              <span
-                class="step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-cocoa-light">Payment</span>
+              <div class="step-circle w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 bg-white text-cocoa-light border border-divider">4</div>
+              <span class="step-label text-xs font-semibold uppercase tracking-wider hidden sm:block text-cocoa-light">Payment</span>
             </div>
           </div>
         </div>
@@ -502,29 +379,18 @@
             Baking memories since 2010. Handcrafted cakes for every special occasion.
           </p>
           <div class="flex space-x-4">
-            <a href="#" class="text-cocoa-light hover:text-pink transition-colors"><i data-lucide="facebook"
-                class="w-5 h-5"></i></a>
-            <a href="#" class="text-cocoa-light hover:text-pink transition-colors"><i data-lucide="instagram"
-                class="w-5 h-5"></i></a>
-            <a href="#" class="text-cocoa-light hover:text-pink transition-colors"><i data-lucide="twitter"
-                class="w-5 h-5"></i></a>
+            <a href="#" class="text-cocoa-light hover:text-pink transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+            <a href="#" class="text-cocoa-light hover:text-pink transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            <a href="#" class="text-cocoa-light hover:text-pink transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
           </div>
         </div>
         <div>
           <h4 class="font-serif text-lg font-bold text-cocoa mb-6 tracking-wide">Quick Links</h4>
           <ul class="space-y-4">
-            <li><a href="#home"
-                class="nav-link text-cocoa-light hover:text-pink transition-colors font-light tracking-wide"
-                data-target="home">Home</a></li>
-            <li><a href="#menu"
-                class="nav-link text-cocoa-light hover:text-pink transition-colors font-light tracking-wide"
-                data-target="home">Menu</a></li>
-            <li><a href="#custom-order"
-                class="nav-link text-cocoa-light hover:text-pink transition-colors font-light tracking-wide"
-                data-target="home">Custom Order</a></li>
-            <li><a href="#about"
-                class="nav-link text-cocoa-light hover:text-pink transition-colors font-light tracking-wide"
-                data-target="home">About Us</a></li>
+            <li><a href="#home" class="nav-link text-cocoa-light hover:text-pink transition-colors font-light tracking-wide" data-target="home">Home</a></li>
+            <li><a href="#menu" class="nav-link text-cocoa-light hover:text-pink transition-colors font-light tracking-wide" data-target="home">Menu</a></li>
+            <li><a href="#custom-order" class="nav-link text-cocoa-light hover:text-pink transition-colors font-light tracking-wide" data-target="home">Custom Order</a></li>
+            <li><a href="#about" class="nav-link text-cocoa-light hover:text-pink transition-colors font-light tracking-wide" data-target="home">About Us</a></li>
           </ul>
         </div>
         <div>
@@ -538,13 +404,10 @@
         </div>
         <div>
           <h4 class="font-serif text-lg font-bold text-cocoa mb-6 tracking-wide">Newsletter</h4>
-          <p class="text-cocoa-light font-light tracking-wide mb-4 text-sm">Subscribe to receive updates, access to
-            exclusive deals, and more.</p>
+          <p class="text-cocoa-light font-light tracking-wide mb-4 text-sm">Subscribe to receive updates, access to exclusive deals, and more.</p>
           <div class="flex flex-col space-y-3">
-            <input type="email" placeholder="Enter your email"
-              class="bg-white border border-divider text-cocoa px-4 py-3 rounded-full focus:outline-none focus:border-pink transition-colors text-sm w-full" />
-            <button
-              class="bg-transparent border border-pink text-pink hover:bg-pink hover:text-white font-semibold text-sm uppercase tracking-widest px-6 py-3 rounded-full transition-all w-full">
+            <input type="email" placeholder="Enter your email" class="bg-white border border-divider text-cocoa px-4 py-3 rounded-full focus:outline-none focus:border-pink transition-colors text-sm w-full" />
+            <button class="bg-transparent border border-pink text-pink hover:bg-pink hover:text-white font-semibold text-sm uppercase tracking-widest px-6 py-3 rounded-full transition-all w-full">
               Subscribe
             </button>
           </div>
@@ -557,7 +420,6 @@
     </div>
   </footer>
 
-  <script src="cakejs.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
