@@ -4,39 +4,55 @@ const categories = [
     id: '1', 
     name: 'Signature Celebrations', 
     description: 'Our most popular, crowd-pleasing cakes for any occasion.',
-    image: 'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&q=80&w=800',
-    video: 'https://videos.pexels.com/video-files/3121459/3121459-uhd_2560_1440_24fps.mp4'
+    image: 'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&q=80&w=800'
   },
   { 
     id: '2', 
     name: 'Occasion Gateaux', 
     description: 'Sophisticated, highly technical mirror-glaze masterpieces.',
-    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=800',
-    video: 'https://videos.pexels.com/video-files/4050296/4050296-uhd_2560_1440_30fps.mp4'
+    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=800'
   },
   { 
     id: '3', 
     name: 'Tasting Assortments', 
     description: 'A curated tray of high-end, miniature patisserie creations.',
-    image: 'https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&q=80&w=800',
-    video: 'https://videos.pexels.com/video-files/4253125/4253125-uhd_2560_1440_30fps.mp4'
+    image: 'https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&q=80&w=800'
   },
   { 
     id: '4', 
     name: "The Signature 'Slice' Series", 
     description: 'An abstract, geometric deconstructed dessert concept.',
-    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=800',
-    video: 'https://videos.pexels.com/video-files/5700987/5700987-uhd_2560_1440_30fps.mp4'
+    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=800'
   }
 ];
 
 const cakes = [
-  { id: '1', name: 'Classic Vanilla Bean', price: 45, category: 'Classic', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800', description: 'Light, fluffy vanilla sponge layered with rich Madagascar vanilla bean buttercream.' },
-  { id: '2', name: 'Dark Chocolate Truffle', price: 55, category: 'Chocolate', image: 'https://images.unsplash.com/photo-1557925923-33b251dc32d6?auto=format&fit=crop&q=80&w=800', description: 'Decadent dark chocolate cake with silky chocolate ganache and truffle topping.' },
-  { id: '3', name: 'Strawberry Shortcake', price: 50, category: 'Fruit', image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=800', description: 'Fresh strawberries and whipped cream sandwiched between layers of vanilla sponge.' },
-  { id: '4', name: 'Red Velvet Dream', price: 60, category: 'Premium', image: 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?auto=format&fit=crop&q=80&w=800', description: 'Classic red velvet with our signature cream cheese frosting and pecan crumble.' },
-  { id: '5', name: 'Lemon Raspberry', price: 55, category: 'Fruit', image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&q=80&w=800', description: 'Zesty lemon cake filled with tart raspberry compote and lemon buttercream.' },
-  { id: '6', name: 'Caramel Macchiato', price: 65, category: 'Premium', image: 'https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&q=80&w=800', description: 'Espresso-infused cake layers with salted caramel filling and coffee buttercream.' }
+  { 
+    id: '1', 
+    name: 'Signature Gateaux', 
+    price: 55, 
+    category: 'Signature', 
+    image: 'https://images.unsplash.com/photo-1557925923-33b251dc32d6?auto=format&fit=crop&q=80&w=800', 
+    description: 'Decadent dark chocolate cake with silky chocolate ganache and truffle topping.',
+    video: 'Firefly Extreme macro cinematography...mp4',
+    badge: 'Limited Edition',
+    gridClass: 'lg:col-span-2 lg:row-span-1'
+  },
+  { 
+    id: '2', 
+    name: 'Gourmet Toppings', 
+    price: 50, 
+    category: 'Gourmet', 
+    image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=800', 
+    description: 'Fresh strawberries and whipped cream sandwiched between layers of vanilla sponge.',
+    video: 'PixVerse_V5.6_Image_Text_360P...mp4',
+    badge: 'Limited Edition',
+    gridClass: 'lg:col-span-2 lg:row-span-1'
+  },
+  { id: '3', name: 'Lemon Raspberry', price: 55, category: 'Fruit', image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&q=80&w=800', description: 'Zesty lemon cake filled with tart raspberry compote and lemon buttercream.' },
+  { id: '4', name: 'Caramel Macchiato', price: 65, category: 'Premium', image: 'https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&q=80&w=800', description: 'Espresso-infused cake layers with salted caramel filling and coffee buttercream.' },
+  { id: '5', name: 'Classic Vanilla Bean', price: 45, category: 'Classic', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800', description: 'Light, fluffy vanilla sponge layered with rich Madagascar vanilla bean buttercream.' },
+  { id: '6', name: 'Artisan Decor', price: 60, category: 'Premium', image: 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?auto=format&fit=crop&q=80&w=800', description: 'Classic red velvet with our signature cream cheese frosting and pecan crumble.' }
 ];
 
 const chefs = [
@@ -119,19 +135,29 @@ function renderCategories() {
   const grid = document.getElementById('categories-grid');
   grid.innerHTML = categories.map((cat, i) => {
     const offsetClass = i % 2 !== 0 ? 'md:mt-24' : '';
+    const isOccasionGateaux = cat.name === 'Occasion Gateaux';
+    
+    // Color logic for all category cards to ensure readability and premium feel
+    const titleColor = 'text-[#F0F8FF]';
+    const descColor = 'text-[#F0F8FF]/90';
+    const btnClass = 'bg-white/10 backdrop-blur-sm border-[#F0F8FF] text-[#F0F8FF] hover:bg-[#F0F8FF] hover:text-cocoa';
+    const arrowColor = 'text-[#F0F8FF]';
+
     return `
       <div class="group relative flex flex-col ${offsetClass} animate-on-scroll delay-${(i % 2 + 1) * 100}">
-        <div class="relative rounded-[2rem] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.15)] transition-all duration-500 hover:-translate-y-2 bg-white border border-[#D4AF37]">
+        <div class="relative rounded-[2rem] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 bg-white border border-divider">
           <div class="aspect-[4/5] w-full overflow-hidden relative">
-            <img src="${cat.image}" alt="${cat.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 group-hover:brightness-105 transition-all duration-700 z-10" />
+            <img src="${cat.image}" alt="${cat.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-700 z-10" />
+            <!-- Subtle Dark Gradient Overlay for Readability -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-[15] opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
           
-          <div class="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-lg border border-white/50 p-6 rounded-2xl transform translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-20">
-            <h3 class="text-2xl font-serif font-bold text-cocoa mb-2">${cat.name}</h3>
-            <p class="text-sm text-cocoa-light font-light leading-relaxed mb-4 line-clamp-2">${cat.description}</p>
-            <a href="#menu" class="inline-flex items-center justify-center gap-2 bg-transparent border border-pink text-pink hover:bg-pink hover:text-white font-semibold text-sm uppercase tracking-widest px-6 py-3 rounded-full transition-all hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(255,77,108,0.3)] group/btn w-full sm:w-auto">
+          <div class="absolute bottom-6 left-6 right-6 backdrop-blur-xl border border-white/20 p-6 rounded-2xl transform translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-20">
+            <h3 class="text-2xl font-serif font-bold ${titleColor} mb-2">${cat.name}</h3>
+            <p class="text-sm ${descColor} font-light leading-relaxed mb-4 line-clamp-2">${cat.description}</p>
+            <a href="#menu" class="inline-flex items-center justify-center gap-2 ${btnClass} border font-semibold text-sm uppercase tracking-widest px-6 py-3 rounded-full transition-all hover:-translate-y-1 group/btn w-full sm:w-auto">
               <span>View Collection</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform ${arrowColor}"></i>
             </a>
           </div>
         </div>
@@ -142,31 +168,89 @@ function renderCategories() {
 
 function renderMenu() {
   const grid = document.getElementById('menu-grid');
-  grid.innerHTML = cakes.map((cake, i) => `
-    <article class="group relative bg-white border border-divider rounded-2xl overflow-hidden hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-all duration-500 flex flex-col animate-on-scroll delay-${(i % 3 + 1) * 100}">
-      <div class="relative h-72 overflow-hidden">
-        <img src="${cake.image}" alt="${cake.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800';" class="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-105 transition-all duration-700" />
-        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md border border-divider px-3 py-1 rounded-full text-xs font-medium text-pink tracking-wider uppercase shadow-sm">
-          ${cake.category}
+  grid.innerHTML = cakes.map((cake, i) => {
+    const isVideo = !!cake.video;
+    return `
+      <div class="collection-card group relative flex flex-col ${cake.gridClass || ''} animate-on-scroll" style="perspective: 1000px;">
+        <div class="relative h-full rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 bg-white flex flex-col hover:-translate-y-2">
+          <!-- Image/Video Container (70%) -->
+          <div class="relative h-[70%] overflow-hidden">
+            <img src="${cake.image}" alt="${cake.name}" class="absolute inset-0 w-full h-full object-cover transition-all duration-700 z-10 group-hover:opacity-0 group-hover:scale-105" />
+            ${isVideo ? `<video src="${cake.video}" muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0"></video>` : ''}
+            
+            <!-- Content Overlay (On Image) -->
+            <div class="absolute inset-0 z-20 flex flex-col justify-end p-8 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+              <h3 class="text-3xl font-serif font-bold text-[#F0F8FF] mb-2">${cake.name}</h3>
+              <p class="text-sm font-sans text-[#F0F8FF]/90 mb-6 line-clamp-2 leading-relaxed">${cake.description}</p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-semibold text-[#F0F8FF]">$${cake.price}</span>
+                <a href="#menu" class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-[#F0F8FF] text-[#F0F8FF] font-semibold text-xs uppercase tracking-widest px-6 py-3 rounded-full transition-all hover:bg-[#F0F8FF] hover:text-cocoa group/btn">
+                  <span>View Collection</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bottom Part (30%) - Pure White Base -->
+          <div class="h-[30%] bg-white p-8 flex flex-col justify-center">
+             <div class="flex items-center gap-2 mb-2">
+               <div class="w-8 h-[1px] bg-pink/30"></div>
+               <span class="text-[10px] text-cocoa/40 uppercase tracking-[0.3em] font-bold">Artisan Series</span>
+             </div>
+             <div class="flex items-center justify-between">
+               <span class="text-xs font-serif font-bold text-cocoa tracking-widest uppercase">Handcrafted</span>
+               <div class="flex gap-1">
+                 <div class="w-1 h-1 rounded-full bg-pink"></div>
+                 <div class="w-1 h-1 rounded-full bg-pink/40"></div>
+                 <div class="w-1 h-1 rounded-full bg-pink/20"></div>
+               </div>
+             </div>
+          </div>
         </div>
       </div>
-      <div class="p-6 flex flex-col flex-grow">
-        <div class="flex justify-between items-start mb-3">
-          <h3 class="text-xl font-serif font-bold text-cocoa line-clamp-1 transition-colors">${cake.name}</h3>
-          <span class="text-xl font-semibold text-pink">$${cake.price}</span>
-        </div>
-        <p class="text-cocoa-light text-sm mb-6 flex-grow line-clamp-2 font-light leading-relaxed">${cake.description}</p>
-        <div class="flex gap-3 mt-auto">
-          <button onclick="startCheckout('cake', '${cake.id}')" class="flex-1 bg-transparent border border-pink text-pink hover:bg-pink hover:text-white py-3 rounded-full font-medium transition-all text-sm uppercase tracking-widest flex items-center justify-center gap-2">
-            <i data-lucide="credit-card" class="w-4 h-4"></i> Buy Now
-          </button>
-          <button onclick="addToCart('${cake.id}')" class="w-12 h-12 flex items-center justify-center bg-pink hover:bg-pink/90 text-white rounded-full transition-colors shrink-0 shadow-md">
-            <i data-lucide="plus" class="w-5 h-5"></i>
-          </button>
-        </div>
-      </div>
-    </article>
-  `).join('');
+    `;
+  }).join('');
+
+  // Add video hover listeners
+  const cards = document.querySelectorAll('.collection-card');
+  cards.forEach(card => {
+    const video = card.querySelector('video');
+    if (video) {
+      card.addEventListener('mouseenter', () => video.play());
+      card.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    }
+  });
+  
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+  
+  setupCollectionInteractions();
+}
+
+function setupCollectionInteractions() {
+  const cards = document.querySelectorAll('.collection-card');
+  
+  cards.forEach(card => {
+    const video = card.querySelector('video');
+    
+    card.addEventListener('mouseenter', () => {
+      if (video) {
+        video.play().catch(err => console.log("Video play blocked:", err));
+      }
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  });
 }
 
 function renderChefs() {
@@ -178,7 +262,7 @@ function renderChefs() {
       </div>
       <h4 class="text-xl font-serif font-bold text-cocoa mb-2">${chef.name}</h4>
       <p class="text-pink text-xs uppercase tracking-widest font-semibold mb-4">${chef.role}</p>
-      <p class="text-cocoa-light text-sm font-light leading-relaxed">${chef.description}</p>
+      <p class="text-cocoa text-sm font-light leading-relaxed">${chef.description}</p>
     </div>
   `).join('');
 }
@@ -190,6 +274,7 @@ function renderChefs() {
     const navTextElements = document.querySelectorAll('.nav-text-color');
   
     window.addEventListener('scroll', () => {
+      if (currentView !== 'home') return;
       const navbar = document.getElementById('navbar');
       if (window.scrollY > 50) {
         navbar.classList.remove('bg-transparent', 'border-transparent');
@@ -238,10 +323,36 @@ function renderChefs() {
   });
 }
 
+let currentView = 'home';
+
 function showView(viewId) {
+  currentView = viewId;
   document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
   document.getElementById(`view-${viewId}`).classList.add('active');
   window.scrollTo(0, 0);
+  
+  // Update navbar state based on view
+  const navbar = document.getElementById('navbar');
+  const navTextElements = document.querySelectorAll('.nav-text-color');
+  
+  if (viewId !== 'home') {
+    navbar.classList.remove('bg-transparent', 'border-transparent');
+    navbar.classList.add('bg-white/70', 'backdrop-blur-md', 'shadow-sm', 'border-divider');
+    navTextElements.forEach(el => {
+      el.classList.remove('text-white');
+      el.classList.add('text-cocoa');
+    });
+  } else {
+    // On home view, let the scroll listener handle it
+    if (window.scrollY < 50) {
+      navbar.classList.add('bg-transparent', 'border-transparent');
+      navbar.classList.remove('bg-white/70', 'backdrop-blur-md', 'shadow-sm', 'border-divider');
+      navTextElements.forEach(el => {
+        el.classList.add('text-white');
+        el.classList.remove('text-cocoa');
+      });
+    }
+  }
 }
 
 // Cart Logic
@@ -307,7 +418,7 @@ function renderCartView() {
           <i data-lucide="shopping-bag" class="w-12 h-12"></i>
         </div>
         <h2 class="text-3xl font-serif font-bold text-cocoa mb-4">Your Cart is Empty</h2>
-        <p class="text-cocoa-light mb-8 max-w-md mx-auto font-light tracking-wide">Looks like you haven't added any delicious cakes yet. Let's fix that!</p>
+        <p class="text-cocoa mb-8 max-w-md mx-auto font-light tracking-wide">Looks like you haven't added any delicious cakes yet. Let's fix that!</p>
         <button onclick="showView('home')" class="inline-flex bg-transparent border border-pink text-pink hover:bg-pink hover:text-white font-semibold px-8 py-3 rounded-full uppercase tracking-widest text-sm transition-all">
           Browse Menu
         </button>
@@ -384,15 +495,101 @@ function renderCartView() {
 
 // Custom Order
 function setupCustomOrder() {
-  document.getElementById('custom-order-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const category = document.getElementById('custom-category').value;
-    const flavor = document.getElementById('custom-flavor').value;
-    
-    if (category && flavor) {
-      checkoutState.customData = { category, flavor };
-      startCheckout('custom');
+  const occasionTiles = document.querySelectorAll('.occasion-tile');
+  const flavorItems = document.querySelectorAll('.flavor-item');
+  const continueBtn = document.getElementById('configurator-continue');
+  
+  const previewImg = document.getElementById('configurator-preview-image');
+  const video1 = document.getElementById('configurator-preview-video-1');
+  const video2 = document.getElementById('configurator-preview-video-2');
+  const previewTitle = document.getElementById('preview-title');
+  const previewDesc = document.getElementById('preview-desc');
+  
+  let selectedOccasion = '';
+  let selectedFlavor = '';
+  
+  const flavorData = {
+    'Vanilla Bean': {
+      image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=1200',
+      title: 'Pure Vanilla Bean',
+      desc: 'Madagascar vanilla bean sponge with silky buttercream.'
+    },
+    'Rich Chocolate': {
+      image: 'https://images.unsplash.com/photo-1557925923-33b251dc32d6?auto=format&fit=crop&q=80&w=1200',
+      title: 'Midnight Chocolate',
+      desc: '70% dark Belgian chocolate with ganache layers.'
+    },
+    'Strawberry': {
+      image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=1200',
+      title: 'Summer Strawberry',
+      desc: 'Fresh farm-picked strawberries with light whipped cream.'
     }
+  };
+
+  function updatePreview() {
+    if (selectedFlavor) {
+      const data = flavorData[selectedFlavor];
+      previewImg.src = data.image;
+      previewTitle.textContent = data.title;
+      previewDesc.textContent = data.desc;
+    }
+    
+    if (selectedOccasion && selectedFlavor) {
+      continueBtn.classList.add('bg-pink', 'text-[#F0F8FF]');
+      continueBtn.classList.remove('text-pink');
+    } else {
+      continueBtn.classList.remove('bg-pink', 'text-[#F0F8FF]');
+      continueBtn.classList.add('text-pink');
+    }
+  }
+
+  occasionTiles.forEach(tile => {
+    tile.addEventListener('click', () => {
+      occasionTiles.forEach(t => t.classList.remove('selected'));
+      tile.classList.add('selected');
+      selectedOccasion = tile.dataset.value;
+      updatePreview();
+    });
+    
+    tile.addEventListener('mouseenter', () => {
+      video2.classList.add('opacity-100');
+      video2.play().catch(err => console.log("Video play blocked:", err));
+    });
+    
+    tile.addEventListener('mouseleave', () => {
+      video2.classList.remove('opacity-100');
+      video2.pause();
+      video2.currentTime = 0;
+    });
+  });
+
+  flavorItems.forEach(item => {
+    item.addEventListener('click', () => {
+      flavorItems.forEach(i => i.classList.remove('selected'));
+      item.classList.add('selected');
+      selectedFlavor = item.dataset.value;
+      updatePreview();
+    });
+    
+    item.addEventListener('mouseenter', () => {
+      video1.classList.add('opacity-100');
+      video1.play().catch(err => console.log("Video play blocked:", err));
+    });
+    
+    item.addEventListener('mouseleave', () => {
+      video1.classList.remove('opacity-100');
+      video1.pause();
+      video1.currentTime = 0;
+    });
+  });
+
+  continueBtn.addEventListener('click', () => {
+    if (!selectedOccasion || !selectedFlavor) {
+      alert('Please select both an occasion and a flavor.');
+      return;
+    }
+    checkoutState.customData = { category: selectedOccasion, flavor: selectedFlavor };
+    startCheckout('custom');
   });
 }
 
@@ -476,7 +673,7 @@ function renderCheckoutStep() {
   if (step === 1) {
     content.innerHTML = `
       <h2 class="text-3xl font-serif font-bold text-cocoa mb-2">Select Size</h2>
-      <p class="text-cocoa-light font-light tracking-wide mb-8">Choose the perfect size for your occasion.</p>
+      <p class="text-cocoa font-light tracking-wide mb-8">Choose the perfect size for your occasion.</p>
       <form id="checkout-form">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
           ${['Small', 'Medium', 'Large'].map(size => `
@@ -497,7 +694,7 @@ function renderCheckoutStep() {
   } else if (step === 2) {
     content.innerHTML = `
       <h2 class="text-3xl font-serif font-bold text-cocoa mb-2">Add a Message</h2>
-      <p class="text-cocoa-light font-light tracking-wide mb-8">What would you like written on the cake?</p>
+      <p class="text-cocoa font-light tracking-wide mb-8">What would you like written on the cake?</p>
       <form id="checkout-form">
         <div class="mb-10">
           <label class="block text-sm font-semibold text-pink uppercase tracking-widest mb-3">Cake Message (Optional)</label>
@@ -514,7 +711,7 @@ function renderCheckoutStep() {
   } else if (step === 3) {
     content.innerHTML = `
       <h2 class="text-3xl font-serif font-bold text-cocoa mb-2">Delivery Details</h2>
-      <p class="text-cocoa-light font-light tracking-wide mb-8">Where should we send this sweet treat?</p>
+      <p class="text-cocoa font-light tracking-wide mb-8">Where should we send this sweet treat?</p>
       <form id="checkout-form" class="space-y-6">
         <div>
           <label class="block text-sm font-semibold text-pink uppercase tracking-widest mb-3">Full Address</label>
@@ -534,7 +731,7 @@ function renderCheckoutStep() {
   } else if (step === 4) {
     content.innerHTML = `
       <h2 class="text-3xl font-serif font-bold text-cocoa mb-2">Payment</h2>
-      <p class="text-cocoa-light font-light tracking-wide mb-8">Secure your order with a 50% advance payment.</p>
+      <p class="text-cocoa font-light tracking-wide mb-8">Secure your order with a 50% advance payment.</p>
       
       <div class="bg-white border-2 border-divider rounded-2xl p-6 mb-8">
         <div class="flex justify-between items-center mb-2">
@@ -576,7 +773,7 @@ function renderCheckoutStep() {
             "This is not a real website. This is a replica/demo created for a client project."
           </p>
         </div>
-        <p class="text-cocoa-light font-light tracking-wide mb-8">Thank you for trying out the checkout flow.</p>
+        <p class="text-cocoa font-light tracking-wide mb-8">Thank you for trying out the checkout flow.</p>
         <button onclick="showView('home')" class="bg-transparent border border-pink text-pink hover:bg-pink hover:text-white font-semibold px-8 py-4 rounded-full uppercase tracking-widest text-sm transition-all">
           Return to Home
         </button>
